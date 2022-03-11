@@ -1,5 +1,5 @@
 .site-header{
 	&.scroll{
-		background-color: #000;
+		@apply bg-deep;
 	}
 }

@@ -28,6 +28,7 @@ module.exports = {
 		},
 		colors: {
 			accent: 'tomato',
+			deep: '#333333',
 			transparent: 'transparent',
 			current: 'currentColor',
 			blue: colors.blue,

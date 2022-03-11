@@ -1,3 +1,4 @@
 {% assign class = include.classes %}
 {% assign text = include.text %}
-<button class="btn {{class}}">Заказать звонок</button>
+{% assign click = include.click %}
+<button class="btn {{class}}" @click={{click}}>Заказать звонок</button>
