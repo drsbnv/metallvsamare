@@ -1,11 +1,8 @@
-<header class="site-header">
-
-  <div class="wrapper flex justify-between">
-    <div class="container">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-    </div>
-  </div>
-    
+<header class="site-header fixed w-full top-0 left-0 bg-gray-500 text-white transition-all duration-700">
+	<div class="container">
+		<div class="flex items-center justify-between md:h-[80px]">
+			{% include components/header/logo.html %}
+			<button class="btn bg-tomato text-white px-8 py-3 rounded-sm font-normal transition-all duration-300 hover:bg-opacity-90">Заказать звонок</button>
+		</div>
+	</div>		
 </header>
