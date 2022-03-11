@@ -2,7 +2,33 @@
 	<div class="container">
 		<div class="flex items-center justify-between md:h-[80px]">
 			{% include components/header/logo.html %}
-			<button class="btn bg-tomato text-white px-8 py-3 rounded-sm font-normal transition-all duration-300 hover:bg-opacity-90">Заказать звонок</button>
+			{% include 
+				components/address.html 
+				classes="text-lg font-light" 
+				classesIcon="w-5 h-auto fill-[#fff]" 
+				address="Самара, ул. Революционная 101 А"
+			%}
+			<div class="flex items-center gap-5">
+				<div class="flex flex-col gap-1">
+					{% include 
+						components/phone-link.html 
+						classes="text-lg" 
+						classesIcon="w-5 h-auto fill-[#fff]" 
+						phone="8 (927) 260 02 77" 
+					%}
+					{% include 
+						components/phone-link.html 
+						classes="text-lg" 
+						classesIcon="w-5 h-auto fill-[#fff]" 
+						phone="8 (927) 260 02 77" 
+					%}
+				</div>
+				{% include 
+					components/button.html 
+					classes="btn-accent" 
+					text="Заказать звонок" 
+				%}
+			</div>
 		</div>
 	</div>		
 </header>

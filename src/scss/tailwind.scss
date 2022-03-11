@@ -1,3 +1,10 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+.btn{
+	@apply px-8 py-3 rounded-sm font-normal transition-all duration-300 hover:bg-opacity-90;
+	&.btn-accent{
+		@apply bg-tomato text-white	
+	}
+}

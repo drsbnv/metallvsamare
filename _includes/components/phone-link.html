@@ -1,0 +1,13 @@
+{% assign class = include.classes %}
+{% assign phone = include.phone %}
+{% assign classIcon = include.classesIcon %}
+<a 
+	href="tel:{% include utils/phonef.html phone=phone %}" 
+	class="flex items-center gap-1 {{class}}"
+>
+	{%- include 
+		components/icons/phone-icon.html 
+		classes=classIcon 
+	-%}
+	<span>{{ phone }}</span>	
+</a>

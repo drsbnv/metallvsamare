@@ -1,0 +1,10 @@
+{% assign class = include.classes %}
+{% assign address = include.address %}
+{% assign classIcon = include.classesIcon %}
+<div class="flex items-center gap-1 {{class}}">
+	{% include 
+		components/icons/location-icon.html 
+		classes=classIcon 
+	%}
+	<span>{{ address }}</span>	
+</div>
