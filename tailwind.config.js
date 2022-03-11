@@ -27,7 +27,7 @@ module.exports = {
 			// => @media (min-width: 1536px) { ... }
 		},
 		colors: {
-			tomato: 'tomato',
+			accent: 'tomato',
 			transparent: 'transparent',
 			current: 'currentColor',
 			blue: colors.blue,

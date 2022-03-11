@@ -1,33 +1,34 @@
 <header class="site-header fixed w-full top-0 left-0 bg-gray-500 text-white transition-all duration-700">
 	<div class="container">
-		<div class="flex items-center justify-between md:h-[80px]">
+		<div class="flex items-center justify-between h-[70px] md:h-[85px]">
 			{% include components/header/logo.html %}
 			{% include 
 				components/address.html 
-				classes="text-lg font-light" 
+				classes="text-lg font-light hidden xl:flex" 
 				classesIcon="w-5 h-auto fill-[#fff]" 
 				address="Самара, ул. Революционная 101 А"
 			%}
-			<div class="flex items-center gap-5">
-				<div class="flex flex-col gap-1">
-					{% include 
-						components/phone-link.html 
-						classes="text-lg" 
-						classesIcon="w-5 h-auto fill-[#fff]" 
-						phone="8 (927) 260 02 77" 
-					%}
-					{% include 
-						components/phone-link.html 
-						classes="text-lg" 
-						classesIcon="w-5 h-auto fill-[#fff]" 
-						phone="8 (927) 260 02 77" 
-					%}
-				</div>
+			<div class="flex flex-col gap-1">
+				{% include 
+					components/phone-link.html 
+					classes="sm:text-lg" 
+					classesIcon="w-5 h-auto fill-[#fff]" 
+					phone="8 (927) 260 02 77" 
+				%}
+				{% include 
+					components/phone-link.html 
+					classes="sm:text-lg" 
+					classesIcon="w-5 h-auto fill-[#fff]" 
+					phone="8 (927) 260 02 77" 
+				%}
+			</div>
+			<div class="flex items-center gap-3">
 				{% include 
 					components/button.html 
-					classes="btn-accent" 
+					classes="btn-accent hidden sm:block" 
 					text="Заказать звонок" 
 				%}
+				{% include components/header/menu-btn.html %}
 			</div>
 		</div>
 	</div>		
