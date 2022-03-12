@@ -1,7 +1,12 @@
 encoding: bom|utf-8
 
 title: Your awesome title
-email: your-email@example.com
+email: sammetok@yandex.ru
+phones:
+  - 8 (927) 011 06 27
+  - 8 (927) 260 02 77
+  - 8 (846) 990 02 77
+address: "Самара, ул. Революционная, 101 А"
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
