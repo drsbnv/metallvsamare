@@ -1,16 +1,9 @@
-.site-header{
-	@apply bg-black;
-	&.scroll{
-		@apply bg-black;
-	}
-}
-
 .site-menu{
 	ul{
 		li{
 			a{
 				&:hover, &.active{
-					background-color: rgba(#fff, .2);
+					background-color: rgba(#fff, .1);
 				}
 			}
 		}
