@@ -1,3 +1,8 @@
+.site-header{
+	&.scroll{
+		@apply shadow-2xl;
+	}
+}
 .site-menu{
 	ul{
 		li{
