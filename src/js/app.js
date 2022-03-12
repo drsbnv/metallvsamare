@@ -1,4 +1,5 @@
 require('./modules/header')
+require('./modules/sliders')
 require('./modules/data')
 
 import Alpine from 'alpinejs'
