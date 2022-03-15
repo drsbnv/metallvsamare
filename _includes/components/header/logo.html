@@ -1,7 +1,7 @@
 {% if page.url == '/' %}
 <div class="logo flex items-center">
 {% else %}
-<a href="/" class="logo flex items-center">
+<a href="{{site.baseurl}}/" class="logo flex items-center">
 {% endif %}
 	<img 
 		src="{{ 'img/logo_only.png' | relative_url }}" 
