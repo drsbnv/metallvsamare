@@ -45,11 +45,17 @@
 			{% include components/header/menu-btn.html name="close" %}			
 		</div>
 		<ul class="mt-[-80px] h-full w-full left-0 text-white flex flex-col justify-center absolute">
-			<li><a class="block text-center p-5 uppercase text-lg transition-all duration-200 active" href="/metal-stairway/">Лестницы</a></li>
-			<li><a class="block text-center p-5 uppercase text-lg transition-all duration-200" href="/metal-canopies-roof/">Навесы</a></li>
-			<li><a class="block text-center p-5 uppercase text-lg transition-all duration-200" href="/fences/">Заборы</a></li>
-			<li><a class="block text-center p-5 uppercase text-lg transition-all duration-200" href="/bespoke/">Нестандартные заказы</a></li>
-			<li><a class="block text-center p-5 uppercase text-lg transition-all duration-200" href="/forged-metal-work/">Ковка</a></li>
+			{% if page.url != '/' %}
+				<li>
+					<a class="block text-center p-5 uppercase text-lg transition-all duration-200" href="/">Главная</a>
+				</li>
+			{% endif %}
+			{% assign categories = site.work-categories | sort: "index" %}
+			{% for link in categories %}
+				<li>
+					<a class="block text-center p-5 uppercase text-lg transition-all duration-200 {% if page.url == link.url %}active{% endif %}" href="{{link.url}}">{{link.title}}</a>
+				</li>
+			{% endfor %}
 		</ul>
 	</div>
 	

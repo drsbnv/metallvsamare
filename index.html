@@ -5,6 +5,12 @@ title: "Главная"
 
 {% include sections/banner.html %}
 
+<pre>
+{% for link in site.work-categories | sort: 'date' | reverse %}
+{{ link | inspect}}
+{% endfor %}
+</pre>
+
 <br>
 <br>
 <br>

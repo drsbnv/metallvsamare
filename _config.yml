@@ -30,3 +30,14 @@ exclude:
   - docker-compose.yml
   - package-lock.json
   - tailwind.config.js
+
+collections:
+  work-categories:
+    output: true
+    permalink: /work-categories/:path/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
