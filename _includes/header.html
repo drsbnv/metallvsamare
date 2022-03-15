@@ -53,7 +53,7 @@
 			{% assign categories = site.work-categories | sort: "index" %}
 			{% for link in categories %}
 				<li>
-					<a class="block text-center p-5 uppercase text-lg transition-all duration-200 {% if page.url == link.url %}active{% endif %}" href="{{link.url}}">{{link.title}}</a>
+					<a class="block text-center p-5 uppercase text-lg transition-all duration-200 {% if page.url == link.url %}active{% endif %}" href="{{site.baseurl}}{{link.url}}">{{link.title}}</a>
 				</li>
 			{% endfor %}
 		</ul>
