@@ -5,59 +5,11 @@ title: "Главная"
 
 {% include sections/banner.html %}
 
-<pre>
-{% for link in site.work-categories | sort: 'date' | reverse %}
-{{ link | inspect}}
-{% endfor %}
-</pre>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+	{% for el in site.data.works limit:12%}
+		{{forloop.index}}. {{ el.short_title }} - {{ el.categories }} - {{ el.date }}
+		{% assign catDir = el.categories | split: ',' | first%}
+		{% assign str = 'img/' %}
+		{% assign img = 'img/' | append: catDir | append: '/' | append: el.uid | append: '/' | append: el.photo %}
+		<img src="{{ img | relative_url }}" alt="" width="300">
+	{% endfor %}
