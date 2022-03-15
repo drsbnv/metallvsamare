@@ -47,7 +47,7 @@
 		<ul class="mt-[-80px] h-full w-full left-0 text-white flex flex-col justify-center absolute">
 			{% if page.url != '/' %}
 				<li>
-					<a class="block text-center p-5 uppercase text-lg transition-all duration-200" href="/">Главная</a>
+					<a class="block text-center p-5 uppercase text-lg transition-all duration-200" href="{{site.baseurl}}/">Главная</a>
 				</li>
 			{% endif %}
 			{% assign categories = site.work-categories | sort: "index" %}
