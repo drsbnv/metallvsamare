@@ -1,19 +1,45 @@
+{% assign container = include.container %}
 {% assign size = site.data.works | size %}
 {% if size > 0 %}
 <section class="works py-20">
-	<h2 class="text-center font-bold text-4xl px-4">Эксперты по металлоконструкциям
+	<h2 class="text-center font-bold text-2xl md:text-4xl px-4">Эксперты по металлоконструкциям
 в Самаре</h2>
-	<p class="section-subtitle text-center px-4 mt-5 text-xl">Мы выполним для вас работы любой сложности в кратчайшие сроки!</p>
-
-	<div class="flex flex-wrap">
+	<p class="section-subtitle text-center px-4 mt-4 md:text-xl">Мы выполним для вас работы любой сложности в кратчайшие сроки!</p>
+	{% if container %}
+	<div class="container">
+	{% endif %}
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 mt-14">
 		{% for el in site.data.works limit:12%}
-		{% assign catDir = el.categories | split: ',' | first %}
+		{% assign catUrl = el.categories | split: ',' | first %}
 		{% assign img = 'img/thumbs/' | append: el.photo_thumb %}
-		<a href="#" class="work-item relative overflow-hidden">
+		<a href="{{site.baseurl}}{{catUrl}}#{{el.uid}}" class="work-item relative overflow-hidden text-white group">
 			<img src="{{ img | relative_url }}" alt="{{el.short_title}}" class="work-img absolute h-full w-full object-cover object-center">
+			<span class="work-info absolute w-full h-full left-0 top-0 z-[1] px-5 flex flex-col justify-end translate-y-[70px] transition-all duration-300 group-hover:translate-y-0">
+				<h3 class="text-xl mb-5">{{ el.short_title }}</h3>
+				<span class="btn btn-accent !px-5 text-sm mb-6">Подробнее</span>
+			</span>
 		</a>
 		{% endfor %}	
 	</div>
+	{% if container %}
+	</div>
+	{% endif %}
 
 </section>
 {% endif %}
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		function setHeight(items) {
+			items.forEach(function(item) {
+				let width = item.offsetWidth
+				item.style.height = width + 'px';
+			})
+		}
+		const items = document.querySelectorAll('.work-item');
+		setHeight(items);
+		window.addEventListener('resize', e => {
+			setHeight(items);
+		})
+	});
+</script>
