@@ -19,7 +19,6 @@ plugins:
   - jekyll-feed
   # - jekyll-sitemap
   - jekyll-seo-tag
-  - ru_date
 
 exclude:
   - README.md
