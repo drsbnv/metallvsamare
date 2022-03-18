@@ -12,7 +12,7 @@
 		{% for el in site.data.works limit:12%}
 		{% assign catUrl = el.categories | split: ',' | first %}
 		{% assign img = 'img/thumbs/' | append: el.photo_thumb %}
-		<a href="{{site.baseurl}}{{catUrl}}#{{el.uid}}" class="work-item relative overflow-hidden text-white group">
+		<a href="{{site.baseurl}}/{{catUrl}}#{{el.uid}}" class="work-item relative overflow-hidden text-white group">
 			<img src="{{ img | relative_url }}" alt="{{el.short_title}}" class="work-img absolute h-full w-full object-cover object-center">
 			<span class="work-info absolute w-full h-full left-0 top-0 z-[1] px-5 flex flex-col justify-end translate-y-[70px] transition-all duration-300 group-hover:translate-y-0">
 				<h3 class="text-xl mb-5">{{ el.short_title }}</h3>
