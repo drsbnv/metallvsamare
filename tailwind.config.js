@@ -40,9 +40,9 @@ module.exports = {
 			yellow: colors.amber,
 		},
 		extend: {
-			// fontFamily: {
-			// 	sans: ['Hyundai', ...defaultTheme.fontFamily.sans],
-			// },
+			fontFamily: {
+				sans: ['Roboto', '"Roboto Condensed"', ...defaultTheme.fontFamily.sans],
+			},
 		},
 	},
 	variants: {
