@@ -4,12 +4,5 @@ title: "Главная"
 ---
 
 {% include sections/banner.html %}
-
-
-	{% for el in site.data.works limit:12%}
-		{{forloop.index}}. {{ el.short_title }} - {{ el.categories }} - {{ el.date }}
-		{% assign catDir = el.categories | split: ',' | first%}
-		{% assign str = 'img/' %}
-		{% assign img = 'img/' | append: catDir | append: '/' | append: el.uid | append: '/' | append: el.photo %}
-		<img src="{{ img | relative_url }}" alt="" width="300">
-	{% endfor %}
+{% include sections/works.html %}
+123

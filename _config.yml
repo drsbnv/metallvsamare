@@ -16,7 +16,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 plugins:
-  # - jekyll-feed
+  - jekyll-feed
   # - jekyll-sitemap
   - jekyll-seo-tag
 
@@ -34,10 +34,10 @@ exclude:
 collections:
   work-categories:
     output: true
-    permalink: /work-categories/:path/
+    permalink: /:path/
 
-defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
+# defaults:
+#   -
+#     scope:
+#       path: ""
+#       type: "pages"
