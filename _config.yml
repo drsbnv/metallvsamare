@@ -31,20 +31,10 @@ exclude:
   - package-lock.json
   - tailwind.config.js
 
-jekyll_admin:
-  hidden_links:
-    - posts
-    # - pages
-    - staticfiles
-    # - datafiles
-    # - configuration
-  # homepage: "pages" #pages (default), posts, <collection_name>, datafiles, staticfiles ,drafts and configuration
-
 collections:
   work-categories:
     output: true
     permalink: /:path/
-    sidebar_label: Работы
 
 # defaults:
 #   -
