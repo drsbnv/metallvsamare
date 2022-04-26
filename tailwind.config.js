@@ -2,9 +2,8 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-	mode: 'jit',
-	purge: ['_site/**/*.*'],
-	darkMode: false, // or 'media' or 'class'
+	//mode: 'jit',
+	content: ['_site/**/*.*'],
 	theme: { 
 		container: {
 			center: true,
@@ -27,17 +26,19 @@ module.exports = {
 			// => @media (min-width: 1536px) { ... }
 		},
 		colors: {
-			accent: 'tomato',
+			accent: '#f6461d',
 			deep: '#222222',
 			transparent: 'transparent',
 			current: 'currentColor',
 			blue: colors.blue,
 			black: colors.black,
 			white: colors.white,
-			gray: colors.trueGray,
+			gray: colors.neutral,
 			indigo: colors.indigo,
 			red: colors.rose,
+			green: colors.emerald,
 			yellow: colors.amber,
+			purple: colors.violet,
 		},
 		extend: {
 			fontFamily: {
@@ -45,8 +46,4 @@ module.exports = {
 			},
 		},
 	},
-	variants: {
-		extend: {},
-	},	
-	plugins: [],
 }
