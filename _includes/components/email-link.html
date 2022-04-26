@@ -1,0 +1,13 @@
+{% assign class = include.classes %}
+{% assign email = include.email %}
+{% assign classIcon = include.classesIcon %}
+<a 
+	href="mailto:{{ email }}" 
+	class="flex items-center gap-1 {{class}}"
+>
+	{%- include 
+		components/icons/email-icon.html 
+		classes=classIcon 
+	-%}
+	<span>{{ email }}</span>	
+</a>
