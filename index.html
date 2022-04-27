@@ -3,8 +3,8 @@ title: Главная
 layout: default
 ---
 
-{% include sections/banner.html %}
-{% include sections/works.html container=true %}
+{% include sections/banner.html data=site.data.banners.home %}
+{% include sections/works.html container=true data=site.data.works limit=12%}
 {% include sections/callback-block.html %}
 {% include sections/seo.html %}
 

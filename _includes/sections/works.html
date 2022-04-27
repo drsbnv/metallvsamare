@@ -1,5 +1,7 @@
 {% assign container = include.container %}
-{% assign size = site.data.works | size %}
+{% assign data = include.data %}
+{% assign limit = include.limit %}
+{% assign size = data | size %}
 {% if size > 0 %}
 <section class="works py-20">
 	<h2 class="text-center font-bold text-2xl md:text-4xl px-4">Эксперты по металлоконструкциям
@@ -12,16 +14,16 @@
 		{% include components/icons/scroll-icon.html %}
 	</div>
 	<div class="flex lg:grid lg:grid-cols-3 xl:grid-cols-4 gap-3 lg:gap-1 mt-5 overflow-x-scroll lg:overflow-x-auto">
-		{% for el in site.data.works limit:12%}
-		{% assign catUrl = el.categories | split: ',' | first %}
-		{% assign img = 'img/thumbs/' | append: el.photo_thumb %}
-		<a href="{{site.baseurl}}/{{catUrl}}#{{el.uid}}" class="work-item relative overflow-hidden text-white group w-[60%] md:w-[40%] lg:w-auto flex-shrink-0">
-			<img src="{{ img | relative_url }}" alt="{{el.short_title}}" class="work-img absolute h-full w-full object-cover object-center">
+		{% for work in data limit:limit %}
+		{% assign catUrl = work.categories | split: ',' | first %}
+		{% assign img = 'img/thumbs/' | append: work.photo_thumb %}
+		<a href="{{site.baseurl}}/{{catUrl}}#{{work.uid}}" class="work-item relative overflow-hidden text-white group w-[60%] md:w-[40%] lg:w-auto flex-shrink-0">
+			<img src="{{ img | relative_url }}" alt="{{work.short_title}}" class="work-img absolute h-full w-full object-cover object-center">
 			<span class="work-info absolute w-full h-full left-0 top-0 z-[1] px-5 flex flex-col justify-end lg:translate-y-[70px] transition-all duration-300 lg:group-hover:translate-y-0">
 				<small class="text-xs sm:text-base font-light">
-					{{el.date}}г.
+					{{work.date}}г.
 				</small>
-				<h3 class="sm:text-xl mb-5 leading-none">{{ el.short_title }}</h3>
+				<h3 class="sm:text-xl mb-5 leading-none">{{ work.short_title }}</h3>
 				<span class="btn btn-accent !px-5 text-xs md:text-sm mb-6">Подробнее</span>
 			</span>
 		</a>

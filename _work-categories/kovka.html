@@ -1,0 +1,14 @@
+---
+layout: default
+catId: kovka
+index: 4
+title: "Ковка"
+h1: "Работы с элементами ковки"
+---
+
+{% include sections/banner.html data='[{"title"=>"Работы с элементами ковки", "img"=>"img/banners/1.jpg"}]' %}
+{% for element in site.data.works %}
+	{% if element.categories contains page.catId %}
+		{{forloop.index0}}. {{element.title}} <br>
+	{% endif %}
+{% endfor %}

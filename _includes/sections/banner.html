@@ -1,3 +1,6 @@
+{% assign data = include.data %}
+{% assign h1 = include.h1 %}
+{% if data | size > 0 %}
 <section class="banner md:h-full" id="banner">
 	<div class="banner-wrapper grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-0">
 
@@ -5,17 +8,23 @@
 
 			<div class="banner-slider swiper h-full">
 				<div class="swiper-wrapper">
-
+					{% for slide in data %}
 					<div class="banner-slide swiper-slide">
-						<div class="banner-image-slide-bg h-full bg-cover bg-right swiper-lazy" data-background="{{ 'img/banners/1.jpg' | relative_url }}">
+						<div class="banner-image-slide-bg h-full bg-cover bg-right swiper-lazy" data-background="{{ slide.img | relative_url }}">
 							<div class="swiper-lazy-preloader"></div>
 						</div>
 						<div  class="banner-text absolute top-6 bottom-8 sm:top-10 sm:bottom-10 top-6 bottom-8 sm:top-10 sm:bottom-10 left-0 right-0 z-10 text-white pr-5">
-							<h2 class="text-2xl sm:text-4xl xl:text-6xl font-bold mb-3 pl-10 !leading-[1.3]">Когда другие отдыхают, <br class="hidden lg:block">мы работаем!</h2>
-							{% assign phone = site.phones[0] %}
-							<p class="text-xl xl:text-3xl pl-10">Не стесняйтесь <a href="tel:{% include utils/phonef.html phone=phone %}" class="text-accent">звонить</a><br class="block sm:hidden"> нам в выходные</p>
+							{% if h1 %}
+							<h1 class="text-2xl sm:text-4xl xl:text-6xl font-bold mb-3 pl-10 !leading-[1.3]">{{ slide.title }}</h1>
+							{% else %}
+							<h2 class="text-2xl sm:text-4xl xl:text-6xl font-bold mb-3 pl-10 !leading-[1.3]">{{ slide.title }}</h2>
+							{% endif %}
+							{% if slide.subtitle %}
+							<p class="text-xl xl:text-3xl pl-10">{{ slide.subtitle }}</p>
+							{% endif %}
 						</div>
 					</div>
+					{% endfor %}
 
 				</div>
 
@@ -63,3 +72,4 @@
 
 	</div>
 </section>
+{% endif %}
