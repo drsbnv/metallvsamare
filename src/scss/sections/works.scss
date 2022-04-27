@@ -2,10 +2,11 @@
 	z-index: 1;
 	&:hover{
 		.work-img{
-			transform: scale(1.4) rotate(-5deg);
+			// transform: scale(1.4) rotate(-5deg);
+			@apply lg:-rotate-6 lg:scale-150;
 		}
 		&:after{
-			@apply bg-opacity-80;
+			@apply lg:bg-opacity-80;
 		}
 	}
 	&:after{
@@ -16,7 +17,7 @@
 		width: 100%;
 		height: 100%;
 		transition: all .25s ease-in-out;
-		@apply bg-deep bg-opacity-30;
+		@apply bg-deep bg-opacity-40;
 		z-index: 0;
 	}
 	.btn{

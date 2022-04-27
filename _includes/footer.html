@@ -1,12 +1,12 @@
-<footer class="site-footer bg-black py-16 text-white font-light text-opacity-90">
+<footer class="site-footer bg-black py-10 lg:py-16 text-white font-light text-opacity-90">
 	<div class="container">
-		<div class="grid grid-cols-3">
-			<div class="footer-col text-sm">
+		<div class="grid grid-cols-6 gap-y-10">
+			<div class="footer-col col-span-6 lg:col-span-2">
 				{% include components/header/logo.html %}
 				<p class="mt-3 text-sm">Надежные металлические конструкции</p>
-				<p class="mt-5">&copy; {{ site.time | date: "%Y"}} «Металлвсамаре»</p>
+				<p class="text-sm mt-5 hidden lg:block">&copy; {{ site.time | date: "%Y"}} «Металлвсамаре»</p>
 			</div>
-			<div class="footer-col">
+			<div class="footer-col col-span-6 sm:col-span-3 lg:col-span-2">
 				<h3 class="text-lg uppercase mb-5">Разделы сайта</h3>
 				<ul>
 					{% if page.url != '/' %}
@@ -25,7 +25,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="footer-col">
+			<div class="footer-col col-span-6 sm:col-span-3 lg:col-span-2">
 				<h3 class="text-lg uppercase mb-5">Контакты</h3>
 				<div class="mb-5">
 					{% for phone in site.phones %}
@@ -47,12 +47,14 @@
 				</div>
 				<div>
 					{% include 
-					components/address.html 
-					classes="" 
+					components/address.html  
 					classesIcon="w-5 h-auto fill-[#fff]" 
 					address=site.address
 					%}
 				</div>
+			</div>
+			<div class="footer-col col-span-6 lg:hidden">
+				<p class="text-sm text-white text-opacity-50">&copy; {{ site.time | date: "%Y"}} «Металлвсамаре»</p>
 			</div>
 		</div>
 	</div>

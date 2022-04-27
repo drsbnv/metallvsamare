@@ -2,6 +2,9 @@
 	&.scroll{
 		@apply shadow-2xl;
 	}
+	.logo span{
+		@apply hidden md:block;
+	}
 }
 .site-menu{
 	ul{
