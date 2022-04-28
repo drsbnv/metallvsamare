@@ -1,7 +1,7 @@
 {
-  "name": "jekyll-laravel-mix-in-docker",
+  "name": "metallvsamare",
   "version": "1.0.0",
-  "main": "src/js/app.js",
+  "main": "index.js",
   "author": "Anatoly Zhuravlev <diywebdev@gmail.com>",
   "scripts": {
     "start": "npx mix watch",

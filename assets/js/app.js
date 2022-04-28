@@ -16074,7 +16074,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkjekyll_laravel_mix_in_docker"] = self["webpackChunkjekyll_laravel_mix_in_docker"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkmetallvsamare"] = self["webpackChunkmetallvsamare"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();

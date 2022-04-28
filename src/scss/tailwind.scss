@@ -1,6 +1,6 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   html {
@@ -21,5 +21,11 @@ body{
 	@apply px-8 py-3 rounded-sm font-medium uppercase transition-all duration-300 bg-opacity-100 hover:bg-opacity-90;
 	&.btn-accent{
 		@apply bg-accent text-white hover:bg-opacity-90;
+	}
+}
+
+.content{
+	p{
+		@apply mb-5;
 	}
 }

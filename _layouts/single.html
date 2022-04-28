@@ -1,0 +1,6 @@
+---
+layout: default
+---
+{% assign dir = page.categories | split: ',' %}
+{% assign img = 'img/' | append: dir[0] | append: '/' | append: page.uid | append: '/' | append: page.photo %}
+{% include sections/banner.html title=page.title img=img h1=true %}

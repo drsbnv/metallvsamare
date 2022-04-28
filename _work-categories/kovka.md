@@ -7,5 +7,6 @@ subtitle: "Подзаголовок для страницы"
 h1: "Работы с элементами ковки"
 ---
 
-kekekek
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae qui, quos dolor, voluptas consectetur consequatur officiis. Animi obcaecati beatae voluptates porro, nostrum neque nihil possimus non, vel est similique eius. Illum, voluptates consectetur accusantium perspiciatis pariatur sint rem voluptas dolorum ad dolores nobis, ducimus, similique expedita vel, numquam quasi sed!
+Изящество, красота и гармония- все это ковка. Если вы хотите подчеркнуть свой стиль и создать неповторимую атмосферу уюта вокруг себя, то вам непременно нужно обзавестись движениями воплощеными в металле! Они подчеркнут имидж и придадут индивидуальность вашему жилищу.
+
+Любая деталь, любая конструкция, окружающая вас заиграет новыми красками и приобретет неповторимый вид, стоит лишь добавить несколько вензелей.
