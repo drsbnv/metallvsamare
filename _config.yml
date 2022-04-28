@@ -20,7 +20,7 @@ plugins:
   - jekyll-feed
   # - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-datapage-generator
+  # - jekyll-datapage-generator
 
 exclude:
   - README.md
