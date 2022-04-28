@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+{% assign curworks = '' | split: '' %}
+{% for element in site.data.works %}
+	{% if element.categories contains page.catId %}
+		{% assign curworks = curworks | push: element %}
+	{% endif %}
+{% endfor %}
+{% assign first = curworks | first %}
+{% assign dir = first.categories | split: ',' %}
+{% assign img = 'img/' | append: dir[0] | append: '/' | append: first.uid | append: '/' | append: first.photo %}
+{% include sections/banner.html title=page.h1 subtitle=page.subtitle img=img h1=true %}
+
+<section class="pt-20">
+	<div class="container">
+		{{ content }}		
+	</div>
+</section>
+
+{% include sections/works.html container=true data=curworks limit=12%}
+{% include sections/callback-block.html %}

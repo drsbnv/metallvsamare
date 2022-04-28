@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: category
 catId: navesy
 index: 2
 title: "Навесы"

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: category
 catId: zabory
 index: 3
 title: "Заборы"
