@@ -20,7 +20,7 @@ plugins:
   - jekyll-feed
   # - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-datapage-generator
+  # - jekyll-datapage-generator
 
 exclude:
   - README.md
@@ -33,13 +33,13 @@ exclude:
   - package-lock.json
   - tailwind.config.js
 
-page_gen-dirs: true
+# page_gen-dirs: true
 
-page_gen:
-  - data: 'works'
-    template: 'single'
-    name: 'uid'
-    dir: 'works'
+# page_gen:
+#   - data: 'works'
+#     template: 'single'
+#     name: 'uid'
+#     dir: 'works'
     # filter_condition: "record['categories'] == 'kovka'"
 
 collections:
@@ -48,7 +48,8 @@ collections:
     permalink: /:path/
 
 # defaults:
-#   -
-#     scope:
-#       path: ""
-#       type: "pages"
+#   - scope:
+#       type: "pages"  # select all category pages
+#     values:
+#       layout: "single"
+#       permalink: works/:path/

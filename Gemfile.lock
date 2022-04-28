@@ -29,6 +29,7 @@ GEM
       rouge (~> 3.0)
       safe_yaml (~> 1.0)
       terminal-table (~> 2.0)
+    jekyll-datapage-generator (1.4.0)
     jekyll-feed (0.16.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-sass-converter (2.2.0)
@@ -39,7 +40,7 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    kramdown (2.3.2)
+    kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
@@ -69,6 +70,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 4.2.2)
+  jekyll-datapage-generator
   jekyll-feed (~> 0.12)
   jekyll-seo-tag
   jekyll-sitemap
