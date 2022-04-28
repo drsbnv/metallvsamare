@@ -10,7 +10,7 @@ layout: default
 {% endfor %}
 {% assign first = curworks | first %}
 {% assign dir = first.categories | split: ',' %}
-{% assign img = 'img/' | append: dir[0] | append: '/' | append: first.uid | append: '/' | append: first.photo %}
+{% assign img = site.baseurl  | append: '/img/' | append: dir[0] | append: '/' | append: first.uid | append: '/' | append: first.photo %}
 {% include sections/banner.html title=page.h1 subtitle=page.subtitle img=img h1=true %}
 
 <section class="pt-20">
