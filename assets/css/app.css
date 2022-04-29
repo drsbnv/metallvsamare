@@ -511,6 +511,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
 .mx-5 {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
@@ -544,6 +547,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mt-8 {
   margin-top: 2rem;
+}
+.mt-10 {
+  margin-top: 2.5rem;
+}
+.mt-1 {
+  margin-top: 0.25rem;
+}
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 .block {
   display: block;
@@ -631,6 +643,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 .flex-col {
   flex-direction: column;
 }
@@ -661,6 +676,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-0 {
   gap: 0px;
 }
+.gap-4 {
+  gap: 1rem;
+}
 .gap-y-10 {
   row-gap: 2.5rem;
 }
@@ -679,6 +697,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .rounded-sm {
   border-radius: 0.125rem;
 }
+.\!rounded-none {
+  border-radius: 0px !important;
+}
 .border {
   border-width: 1px;
 }
@@ -686,8 +707,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(212 212 212 / var(--tw-border-opacity));
 }
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
 .border-opacity-0 {
   --tw-border-opacity: 0;
+}
+.border-opacity-70 {
+  --tw-border-opacity: 0.7;
 }
 .bg-deep {
   --tw-bg-opacity: 1;
@@ -704,6 +732,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-accentBlue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(33 150 243 / var(--tw-bg-opacity));
+}
+.bg-transparent {
+  background-color: transparent;
 }
 .bg-opacity-\[\.98\] {
   --tw-bg-opacity: .98;
@@ -770,14 +805,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pl-10 {
   padding-left: 2.5rem;
 }
+.pb-20 {
+  padding-bottom: 5rem;
+}
+.pt-14 {
+  padding-top: 3.5rem;
+}
 .pt-20 {
   padding-top: 5rem;
 }
 .pb-12 {
   padding-bottom: 3rem;
 }
-.pb-10 {
-  padding-bottom: 2.5rem;
+.text-left {
+  text-align: left;
 }
 .text-center {
   text-align: center;
@@ -808,6 +849,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 .font-bold {
   font-weight: 700;
@@ -860,6 +905,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+.outline-0 {
+  outline-width: 0px;
+}
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -885,6 +933,7 @@ body {
 
 .btn {
   border-radius: 0.125rem;
+  border-width: 1px;
   --tw-bg-opacity: 1;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -901,6 +950,8 @@ body {
   --tw-bg-opacity: 0.9;
 }
 .btn.btn-accent {
+  --tw-border-opacity: 1;
+  border-color: rgb(246 70 29 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(246 70 29 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -1693,6 +1744,11 @@ button.swiper-pagination-bullet {
   background-color: rgb(246 70 29 / var(--tw-bg-opacity));
 }
 
+.swiper-lazy-preloader {
+  -webkit-animation: swiper-preloader-spin 1s infinite linear;
+          animation: swiper-preloader-spin 1s infinite linear;
+}
+
 .work-item {
   z-index: 1;
 }
@@ -1729,6 +1785,18 @@ button.swiper-pagination-bullet {
 
 .work-img {
   transition: all 0.25s ease-out;
+}
+
+section.callback ::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+section.callback :-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+section.callback ::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .after\:absolute::after {
@@ -1786,6 +1854,10 @@ button.swiper-pagination-bullet {
   border-color: rgb(34 34 34 / var(--tw-border-opacity));
 }
 
+.focus\:border-opacity-100:focus {
+  --tw-border-opacity: 1;
+}
+
 @media (min-width: 640px) {
 
   .sm\:top-10 {
@@ -1830,6 +1902,10 @@ button.swiper-pagination-bullet {
 }
 
 @media (min-width: 768px) {
+
+  .md\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
 
   .md\:mx-0 {
     margin-left: 0px;

@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 {% assign curworks = '' | split: '' %}
 {% for element in site.data.works %}
 	{% if element.categories contains page.catId %}
@@ -12,12 +11,15 @@ layout: default
 {% assign dir = first.categories | split: ',' %}
 {% assign img = 'img/' | append: dir[0] | append: '/' | append: first.uid | append: '/' | append: first.photo %}
 {% include sections/banner.html title=page.h1 subtitle=page.subtitle img=img h1=true %}
-
 <section class="pt-20 content">
 	<div class="container">
 		{{ content }}		
 	</div>
 </section>
-
 {% include sections/works.html container=true data=curworks limit=12%}
-{% include sections/callback-block.html %}
+{% 
+include sections/callback-block.html 
+title="Закажите надежный металлокаркас лестницы прямо сейчас!"
+subtitle="Оставьте свои данные и мы свяжемся с Вами в ближайшее время"
+classes="mb-10"
+%}

@@ -3056,16 +3056,8 @@ var galarySlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.galary-s
   loop: false,
   speed: 1000,
   spaceBetween: 20,
-  // preloadImages: false,
-  // lazy: true,
-  // effect: 'fade',
-  // fadeEffect: {
-  // 	crossFade: true 
-  // },
-  // navigation: {
-  // 	nextEl: '.swiper-button-next',
-  // 	prevEl: '.swiper-button-prev',
-  // },
+  preloadImages: false,
+  lazy: true,
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
@@ -3074,7 +3066,8 @@ var galarySlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.galary-s
   },
   breakpoints: {
     320: {
-      slidesPerView: 1
+      slidesPerView: 1 // autoHeight: true
+
     },
     768: {
       slidesPerView: 2

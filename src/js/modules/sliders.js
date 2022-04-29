@@ -51,16 +51,8 @@ const galarySlider = new Swiper('.galary-slider', {
 	loop: false,
 	speed: 1000,
 	spaceBetween: 20,
-	// preloadImages: false,
-	// lazy: true,
-	// effect: 'fade',
-	// fadeEffect: {
-	// 	crossFade: true 
-	// },
-	// navigation: {
-	// 	nextEl: '.swiper-button-next',
-	// 	prevEl: '.swiper-button-prev',
-	// },
+	preloadImages: false,
+	lazy: true,
 	pagination: {
 		el: '.swiper-pagination',
 		type: 'bullets', //'bullets' | 'fraction' | 'progressbar' | 'custom'
@@ -69,6 +61,7 @@ const galarySlider = new Swiper('.galary-slider', {
 	breakpoints: {
 		320: {
 			slidesPerView: 1,
+			// autoHeight: true
 		},
 		768: {
 			slidesPerView: 2,

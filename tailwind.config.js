@@ -27,6 +27,7 @@ module.exports = {
 		},
 		colors: {
 			accent: '#f6461d',
+			accentBlue: '#2196f3',
 			deep: '#222222',
 			transparent: 'transparent',
 			current: 'currentColor',

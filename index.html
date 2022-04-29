@@ -4,7 +4,17 @@ layout: default
 ---
 
 {% include sections/banner.html data=site.data.banners.home %}
-{% include sections/works.html container=true data=site.data.works limit=12%}
-{% include sections/callback-block.html %}
+{% 
+include sections/works.html 
+container=true 
+data=site.data.works 
+title="Эксперты по металлоконструкциям в Самаре"
+subtitle="Мы выполним для вас работы любой сложности в кратчайшие сроки!"
+limit=12%}
+{% 
+include sections/callback-block.html 
+title="Закажите надежную металлоконструкцию прямо сейчас!"
+subtitle="Оставьте свои данные и мы свяжемся с Вами в ближайшее время"
+%}
 {% include sections/seo.html %}
 
