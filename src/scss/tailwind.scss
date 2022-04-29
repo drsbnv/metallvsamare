@@ -29,3 +29,9 @@ body{
 		@apply mb-5;
 	}
 }
+
+.galary{
+	.swiper-pagination-bullet{
+		@apply border border-accent;
+	}
+}

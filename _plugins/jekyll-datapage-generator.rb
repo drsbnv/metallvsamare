@@ -8,8 +8,8 @@ module Jekyll
       @name = name
       self.process(@name)
       self.data ||= {}
-      self.data['layout'] = 'single'
-      self.data['title'] = data['title']
+      # self.data['layout'] = 'single'
+      # self.data['title'] = data['title']
     end
   end
 
@@ -18,13 +18,15 @@ module Jekyll
       works = site.data['works']
       works.each do |data|
         name = "#{data['uid']}.html"
-        page = Jekyll::DataPage.new(site, site.source, 'works', name)
+        dir = data['categories'].split(',')
+        page = Jekyll::DataPage.new(site, site.source, dir[0], name)
+        page.data['layout'] = 'single'
         page.data['title'] = data['title']
         page.data['categories'] = data['categories']
         page.data['uid'] = data['uid']
         page.data['photo'] = data['photo']
-        page.data['layout'] = 'single'
-        # page.content = "This is #{data['uid']}"
+        page.data['photos'] = data['photos']
+        page.content = "This is #{data['uid']}"
         site.pages << page
       end
     end

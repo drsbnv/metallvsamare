@@ -46,3 +46,35 @@ const slides = document.querySelectorAll('.banner-slide');
 if (slides.length > 1) loop = true;
 
 initSlider(0, loop);
+
+const galarySlider = new Swiper('.galary-slider', {
+	loop: false,
+	speed: 1000,
+	spaceBetween: 20,
+	// preloadImages: false,
+	// lazy: true,
+	// effect: 'fade',
+	// fadeEffect: {
+	// 	crossFade: true 
+	// },
+	// navigation: {
+	// 	nextEl: '.swiper-button-next',
+	// 	prevEl: '.swiper-button-prev',
+	// },
+	pagination: {
+		el: '.swiper-pagination',
+		type: 'bullets', //'bullets' | 'fraction' | 'progressbar' | 'custom'
+		clickable: true,
+	},
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+		},
+		768: {
+			slidesPerView: 2,
+		},
+		1024: {
+			slidesPerView: 3,
+		},
+	}
+})

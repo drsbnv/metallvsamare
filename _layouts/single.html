@@ -2,5 +2,32 @@
 layout: default
 ---
 {% assign dir = page.categories | split: ',' %}
-{% assign img = 'img/' | append: dir[0] | append: '/' | append: page.uid | append: '/' | append: page.photo %}
-{% include sections/banner.html title=page.title img=img h1=true %}
+{% assign imgDir = 'img/' | append: dir[0] | append: '/' | append: page.uid | append: '/' %}
+{% assign photo = imgDir | append: page.photo %}
+{% include sections/banner.html title=page.title img=photo h1=true %}
+{% assign photos = page.photos | split: ',' %}
+{% if photos %}
+<section class="pt-20 pb-10 galary">
+	<div class="container">
+		<div class="galary-slider swiper">
+			<div class="swiper-wrapper pb-12">
+				{% for photo in photos %}
+				{% assign img = imgDir | append: photo %}
+				<div class="galary-slide swiper-slide">
+					<img src="{{img | relative_url }}" />	
+				</div>		
+				{% endfor %}
+			</div>	
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+</section>
+{% endif %}
+
+<section class="pt-20 content">
+	<div class="container">
+		{{ content }}		
+	</div>
+</section>
+
+{% include sections/callback-block.html %}

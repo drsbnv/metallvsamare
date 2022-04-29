@@ -773,6 +773,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pt-20 {
   padding-top: 5rem;
 }
+.pb-12 {
+  padding-bottom: 3rem;
+}
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
 .text-center {
   text-align: center;
 }
@@ -817,9 +823,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .uppercase {
   text-transform: uppercase;
-}
-.capitalize {
-  text-transform: capitalize;
 }
 .leading-tight {
   line-height: 1.25;
@@ -909,6 +912,12 @@ body {
 
 .content p {
   margin-bottom: 1.25rem;
+}
+
+.galary .swiper-pagination-bullet {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(246 70 29 / var(--tw-border-opacity));
 }
 
 .site-header.scroll {
