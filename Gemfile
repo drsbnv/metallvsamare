@@ -16,7 +16,7 @@ gem "jekyll", "~> 4.2.2"
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-seo-tag"
-  # gem "jekyll-datapage-generator"
+  gem "jekyll-datapage-generator"
 end
 
 gem 'jekyll-sitemap', group: [:jekyll_plugins]
