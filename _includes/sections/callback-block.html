@@ -1,6 +1,23 @@
-{% assign title = include.title %}
-{% assign subtitle = include.subtitle %}
 {% assign sectclass = include.classes %}
+{% assign splitUrl = page.url | split: '/' %}
+{% if splitUrl %}
+	{% assign url = splitUrl[1] %}
+{% endif %}
+{% case url %} 
+{% when 'lestnicy' %} 
+{% assign title = "Закажите надежный металлокаркас лестницы прямо сейчас!" %}
+{% when 'navesy' %} 
+{% assign title = "Закажите идеальный навес прямо сейчас!" %}
+{% when 'zabory' %} 
+{% assign title = "Закажите забор любой сложности прямо сейчас!" %}
+{% when 'kovka' %} 
+{% assign title = "Закажите любую работу с элементами ковки прямо сейчас!" %}
+{% when 'nestandartnye-zakazy' %} 
+{% assign title = "Закажите любую металлическую конструкцию прямо сейчас!" %}
+{% else %} 
+{% assign title = "Закажите надежную металлоконструкцию прямо сейчас!" %}
+{% endcase %}
+{% assign subtitle = "Оставьте свои данные и мы свяжемся с Вами в ближайшее время" %}
 <section class="callback pb-20 pt-14 relative bg-accentBlue text-white {% if sectclass %}{{sectclass}}{% endif %}">
 	<div class="container">
 		<div class="text-center">

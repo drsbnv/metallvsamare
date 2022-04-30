@@ -1,9 +1,28 @@
 {% assign container = include.container %}
 {% assign data = include.data %}
-{% assign title = include.title %}
-{% assign subtitle = include.subtitle %}
 {% assign limit = include.limit %}
 {% assign size = data | size %}
+{% assign splitUrl = page.url | split: '/' %}
+{% if splitUrl %}
+	{% assign url = splitUrl[1] %}
+{% endif %}
+{% case url %} 
+{% when 'lestnicy' %} 
+{% assign title = "Эксперты по металлокаркасам лестниц в Самаре" %}
+{% assign subtitle = "Мы выполним для Вас каркас лестницы любой сложности в кратчайшие сроки!" %}
+{% when 'navesy' %} 
+{% assign title = "Эксперты по металлическим навесам в Самаре" %}
+{% assign subtitle = "Мы разработаем, изготовим и смонтируем Ваш идеальный навес в кратчайшие сроки!" %}
+{% when 'zabory' %} 
+{% assign title = "Эксперты по металлическим заборам в Самаре" %}
+{% assign subtitle = "Огородим любую территорию забором от проф.листа до кованого в кратчайшие сроки!" %}
+{% when 'kovka' %} 
+{% assign title = "Эксперты по ковке в Самаре" %}
+{% assign subtitle = "Мы выполним для Вас любую работу с элементами ковки в кратчайшие сроки!" %}
+{% else %} 
+{% assign title = "Эксперты по металлоконструкциям в Самаре" %}
+{% assign subtitle = "Мы выполним для вас работы любой сложности в кратчайшие сроки!" %}
+{% endcase %}
 {% if size > 0 %}
 <section class="works py-20">
 	{% if title %}
