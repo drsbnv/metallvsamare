@@ -35,3 +35,19 @@ body{
 		@apply border border-accent;
 	}
 }
+
+.custom-checkbox{
+	@apply font-light;
+	.fake-checkbox{
+		@apply cursor-pointer w-4 h-4 border relative top-0.5 left-0.5 mr-2 before:content-[''] before:w-[10px] before:h-[10px] before:absolute before:left-0.5 before:top-0.5 before:transition-all before:duration-200 before:opacity-0;
+	}
+	input{
+		width: 0;
+		height: 0;
+		position: absolute;
+		opacity: 0;
+		&:checked~span > .fake-checkbox{
+			@apply before:opacity-100;
+		}
+	}
+}

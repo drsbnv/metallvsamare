@@ -539,20 +539,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-2 {
   margin-top: 0.5rem;
 }
+.mt-1 {
+  margin-top: 0.25rem;
+}
 .mt-4 {
   margin-top: 1rem;
-}
-.mb-6 {
-  margin-bottom: 1.5rem;
 }
 .mt-8 {
   margin-top: 2rem;
 }
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
 .mt-10 {
   margin-top: 2.5rem;
-}
-.mt-1 {
-  margin-top: 0.25rem;
 }
 .mb-10 {
   margin-bottom: 2.5rem;
@@ -707,6 +707,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(212 212 212 / var(--tw-border-opacity));
 }
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
@@ -790,14 +794,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .\!px-5 {
   padding-left: 1.25rem !important;
   padding-right: 1.25rem !important;
-}
-.py-32 {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
-.\!px-20 {
-  padding-left: 5rem !important;
-  padding-right: 5rem !important;
 }
 .pr-5 {
   padding-right: 1.25rem;
@@ -969,6 +965,43 @@ body {
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(246 70 29 / var(--tw-border-opacity));
+}
+
+.custom-checkbox {
+  font-weight: 300;
+}
+.custom-checkbox .fake-checkbox {
+  position: relative;
+  top: 0.125rem;
+  left: 0.125rem;
+  margin-right: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+  cursor: pointer;
+  border-width: 1px;
+}
+.custom-checkbox .fake-checkbox::before {
+  position: absolute;
+  left: 0.125rem;
+  top: 0.125rem;
+  height: 10px;
+  width: 10px;
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  --tw-content: "";
+  content: var(--tw-content);
+}
+.custom-checkbox input {
+  width: 0;
+  height: 0;
+  position: absolute;
+  opacity: 0;
+}
+.custom-checkbox input:checked ~ span > .fake-checkbox::before {
+  content: var(--tw-content);
+  opacity: 1;
 }
 
 .site-header.scroll {
@@ -1799,40 +1832,16 @@ section.callback ::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.after\:absolute::after {
-  content: var(--tw-content);
-  position: absolute;
-}
-
-.after\:left-0::after {
-  content: var(--tw-content);
-  left: 0px;
-}
-
-.after\:top-0::after {
-  content: var(--tw-content);
-  top: 0px;
-}
-
-.after\:h-full::after {
-  content: var(--tw-content);
-  height: 100%;
-}
-
-.after\:w-full::after {
-  content: var(--tw-content);
-  width: 100%;
-}
-
-.after\:bg-black::after {
+.before\:bg-black::before {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.after\:bg-opacity-60::after {
+.before\:bg-white::before {
   content: var(--tw-content);
-  --tw-bg-opacity: 0.6;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .hover\:border-opacity-100:hover {
@@ -1955,11 +1964,6 @@ section.callback ::placeholder {
     line-height: 1.75rem;
   }
 
-  .md\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -1968,6 +1972,11 @@ section.callback ::placeholder {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
