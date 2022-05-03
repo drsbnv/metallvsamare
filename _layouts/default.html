@@ -2,7 +2,12 @@
 <html lang="{{ page.lang | default: site.lang | default: 'ru' }}">
 {%- include head.html -%}
 
-<body x-data="data">
+<body 
+class="relative" 
+x-data="data"
+@keydown.escape="isModalOpen = false"
+:class="{'overflow-hidden md:pr-[17px]': isModalOpen || isResponseModalOpen}"
+>
 
 	{%- include header.html -%}
 

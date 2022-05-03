@@ -1,5 +1,7 @@
 ---
 layout: default
+pagination:
+  enabled: true
 ---
 {% assign curworks = '' | split: '' %}
 {% for element in site.data.works %}
@@ -16,5 +18,5 @@ layout: default
 		{{ content }}		
 	</div>
 </section>
-{% include sections/works.html container=true data=curworks limit=12%}
+{% include sections/works.html container=true data=curworks limit=1000%}
 {% include sections/callback-block.html classes="mb-10" %}

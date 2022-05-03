@@ -69,32 +69,23 @@
 
 				<div class="w-full flex flex-wrap items-end justify-between lg:block">
 
+					<input type="email" tabindex="-1" name="Email" placeholder="mail@example.com" class="hidden">
+
 					<label class="form-group w-full md:w-[32%] lg:w-full block text-base font-medium mb-5 md:mb-0 lg:mb-4">
 						Имя
-						<input type="text" class="text-base px-5 py-3 border border-gray-300 block rounded-0 outline-none w-full mt-2 duration-300 placeholder-gray-600::placeholder focus:border-deep" placeholder="Ваше имя">
+						<input type="text" class="text-base px-5 py-3 border border-gray-300 block rounded-0 outline-none w-full mt-2 duration-300 placeholder-gray-600::placeholder focus:border-deep" name="name" placeholder="Ваше имя">
 					</label>
 					<label class="form-group w-full md:w-[32%] lg:w-full block text-base font-medium mb-5 md:mb-0 lg:mb-6">
 						Телефон
 						<div class="form-group required-field col-span-3 md:col-span-1" id="phone">
-							<input type="text" class="text-base px-5 py-3 border border-gray-300 block rounded-0 outline-none w-full mt-2 duration-300 placeholder-gray-600::placeholder focus:border-deep" placeholder="Ваш телефон">
-							<small class="block text-left text-xs text-accent mt-1 font-normal">Поле обязательно для заполнения</small>
+							<input type="text" class="text-base px-5 py-3 border border-gray-300 block rounded-0 outline-none w-full mt-2 duration-300 placeholder-gray-600::placeholder focus:border-deep" name="phone" placeholder="Ваш телефон">
+							<small class="block text-left text-xs text-accent mt-1 font-normal hidden">Поле обязательно для заполнения</small>
 						</div>
 					</label>
 
-					<button class="btn btn-accent w-full md:w-[32%] lg:w-full">Отправить</button>
+					{% include components/agree.html borderClass="border-black before:bg-black flex-shrink-0" %}
 
-					<div class="form-group required-field col-span-3 mt-5" id="agree">
-						<label class="custom-checkbox">
-							<input type="checkbox" name="agree" class="group">
-							<span class="flex">
-								<span class="fake-checkbox border-black before:bg-black flex-shrink-0"></span>
-								<span>
-									Согласен на <a href="#" class="underline transition-all font-light duration-700 hover:no-underline">обработку персональных данных</a>
-								</span>
-							</span>
-						</label>
-						<small class="block text-left text-xs text-accent mt-1">Чтобы продолжить установите флажок</small>
-					</div>
+					<button class="btn btn-accent w-full md:w-[32%] lg:w-full mt-5">Отправить</button>
 
 				</div>
 

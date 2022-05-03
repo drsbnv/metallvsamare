@@ -26,7 +26,7 @@ module Jekyll
         page.data['uid'] = data['uid']
         page.data['photo'] = data['photo']
         page.data['photos'] = data['photos']
-        page.content = "This is #{data['uid']}"
+        page.content = data['text']
         site.pages << page
       end
     end

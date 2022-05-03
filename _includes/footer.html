@@ -59,3 +59,38 @@
 		</div>
 	</div>
 </footer>
+
+<!-- overlay -->
+<div
+class="overflow-y-auto"
+style="background-color: rgba(0,0,0,0.8)"
+x-show="isModalOpen"
+:class="{ 'fixed w-full h-full inset-0 z-50 flex items-start justify-center': isModalOpen }"
+>
+	<!-- dialog -->
+	<div
+	class="max-w-[450px] w-full bg-white shadow-2xl m-4 my-12 sm:m-8 px-5 p-4 sm:py-8 relative z-50"
+	x-show="isModalOpen"
+	@click.away="isModalOpen = false"
+	>
+	<button class="absolute top-1 right-1 text-xl p-1 px-3" @click="isModalOpen = false;">&times;</button>
+	<h3 class="text-2xl text-center mb-2" x-ref="modalTitle"></h3>
+	<p class="text-center mb-6">Оставьте свои данные и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время</p>
+
+	<form>
+		<input type="email" tabindex="-1" name="Email" placeholder="mail@example.com" class="hidden">
+		<div class="form-group mb-5">
+			<input type="text" class="text-base px-5 py-3 border border-gray-300 block rounded-0 outline-none w-full duration-300 placeholder-gray-600::placeholder focus:border-deep" name="name" placeholder="Ваше имя">
+		</div>
+		<div class="form-group required-field mb-5" id="phone">
+			<input type="text" class="text-base px-5 py-3 border border-gray-300 block rounded-0 outline-none w-full duration-300 placeholder-gray-600::placeholder focus:border-deep" name="phone" placeholder="Ваш телефон">
+			<small class="block text-left text-xs text-accent mt-1 font-normal hidden">Поле обязательно для заполнения</small>
+		</div>
+
+		{% include components/agree.html borderClass="border-black before:bg-black flex-shrink-0" %}
+
+		<button class="btn btn-accent w-full md:w-[32%] lg:w-full mt-5">Отправить</button>
+	</form>
+
+	</div><!-- /dialog -->
+</div><!-- /overlay -->

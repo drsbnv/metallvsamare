@@ -1,6 +1,6 @@
 encoding: bom|utf-8
 
-title: Your awesome title
+title: Металлвсамаре
 email: sammetok@yandex.ru
 phones:
   - 8 (927) 011 06 27
@@ -20,7 +20,20 @@ plugins:
   - jekyll-feed
   # - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate-v2
   # - jekyll-datapage-generator
+
+# category_dir: works
+# pagination:
+#   enabled: true
+#   per_page: 3
+#   title: ':title - Страница :num'
+#   limit: 0
+#   sort_field: 'date'
+#   sort_reverse: true
+#   trail:
+#     before: 2
+#     after: 2
 
 exclude:
   - README.md
@@ -32,15 +45,6 @@ exclude:
   - docker-compose.yml
   - package-lock.json
   - tailwind.config.js
-
-# page_gen-dirs: true
-
-# page_gen:
-#   - data: 'works'
-#     template: 'single'
-#     name: 'uid'
-#     dir: 'works'
-    # filter_condition: "record['categories'] == 'kovka'"
 
 collections:
   work-categories:

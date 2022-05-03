@@ -1,5 +1,7 @@
 document.addEventListener('alpine:init', () => {
 	Alpine.data('data', () => ({
-		openMenu: false
+		openMenu: false,
+		isModalOpen: false,
+		isResponseModalOpen: false
 	}))	
 })

@@ -25,7 +25,7 @@
 					components/button.html 
 					classes="btn-accent hidden sm:block" 
 					text="Заказать звонок" 
-					click='alert("Заказать&nbsp;звонок")'
+					click="$refs.modalTitle.innerText='Обратная связь'; isModalOpen = true;"
 				%}
 				{% include components/header/menu-btn.html name="open" %}
 			</div>

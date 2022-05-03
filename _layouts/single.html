@@ -24,9 +24,11 @@ layout: default
 	</div>
 </section>
 {% endif %}
+{% if content %}
 <section class="py-10 content">
 	<div class="container">
 		{{ content }}		
 	</div>
 </section>
+{% endif %}
 {% include sections/callback-block.html classes="mb-10" %}

@@ -2946,6 +2946,8 @@ __webpack_require__(/*! ./modules/header */ "./src/js/modules/header.js");
 
 __webpack_require__(/*! ./modules/sliders */ "./src/js/modules/sliders.js");
 
+__webpack_require__(/*! ./modules/form */ "./src/js/modules/form.js");
+
 __webpack_require__(/*! ./modules/data */ "./src/js/modules/data.js");
 
 
@@ -2963,8 +2965,77 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 document.addEventListener('alpine:init', function () {
   Alpine.data('data', function () {
     return {
-      openMenu: false
+      openMenu: false,
+      isModalOpen: false,
+      isResponseModalOpen: false
     };
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/modules/form.js":
+/*!********************************!*\
+  !*** ./src/js/modules/form.js ***!
+  \********************************/
+/***/ (() => {
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+var $$$ = function $$$(name) {
+  return document.querySelector(name);
+},
+    $$ = function $$(name) {
+  return document.querySelectorAll(name);
+};
+
+function maskphone(e) {
+  var num = this.value.replace('+7', '').replace(/\D/g, '').split(/(?=.)/),
+      i = num.length;
+  if (0 <= i) num.unshift('+7');
+  if (1 <= i) num.splice(1, 0, ' ');
+  if (4 <= i) num.splice(5, 0, ' ');
+  if (7 <= i) num.splice(9, 0, '-');
+  if (9 <= i) num.splice(12, 0, '-');
+  if (11 <= i) num.splice(15, num.length - 15);
+  this.value = num.join('');
+
+  if (num.length == 1 && num[0] == "") {
+    this.parentElement.querySelector('small').classList.remove('hidden');
+    this.parentElement.querySelector('small').innerText = 'Поле обязательно для заполнения';
+    return;
+  } else if (num.length != 15 || _toConsumableArray(new Set(num)).length == 1) {
+    this.parentElement.querySelector('small').classList.remove('hidden');
+    this.parentElement.querySelector('small').innerText = 'Некорректный номер телефона';
+    return;
+  }
+
+  this.parentElement.querySelector('small').classList.add('hidden');
+}
+
+;
+$$("input[name=phone]").forEach(function (element) {
+  element.addEventListener('focus', maskphone);
+  element.addEventListener('input', maskphone);
+});
+$$("input[name=agree]").forEach(function (element) {
+  var mes = element.parentElement.parentElement.querySelector('small');
+  element.addEventListener('change', function (e) {
+    if (!e.target.checked) {
+      mes.classList.remove('hidden');
+    } else {
+      mes.classList.add('hidden');
+    }
   });
 });
 

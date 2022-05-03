@@ -28,32 +28,22 @@
 			<p class="mt-3">{{ subtitle }}</p>
 			{% endif %}
 			<form class="grid grid-cols-3 gap-4 mt-10">
+				<input type="email" tabindex="-1" name="Email" placeholder="mail@example.com" class="hidden">
 				<div class="form-group col-span-3 md:col-span-1" id="name">
 					<input type="text" name="name" placeholder="Ваше имя" class="bg-transparent outline-0 border border-white border-opacity-70 px-5 py-3 duration-300 font-light focus:border-opacity-100 w-full">
 				</div>
 				<div class="form-group required-field col-span-3 md:col-span-1" id="phone">
 					<input type="text" name="phone" placeholder="Ваш телефон" class="bg-transparent outline-0 border border-white border-opacity-70 px-5 py-3 duration-300 font-light focus:border-opacity-100 w-full">
-					<small class="block text-left text-xs text-accent mt-1">Поле обязательно для заполнения</small>
+					<small class="block text-left text-xs text-accent mt-1 hidden">Поле обязательно для заполнения</small>
 				</div>
 				<div class="form-group col-span-3 md:col-span-1" id="name">
 					{% include 
 					components/button.html 
 					classes="btn-accent w-full !rounded-none" 
-					text="Заказать"
+					text="Отправить"
 					%}
 				</div>
-				<div class="form-group required-field col-span-3" id="agree">
-					<label class="custom-checkbox">
-						<input type="checkbox" name="agree" class="group">
-						<span class="flex">
-							<span class="fake-checkbox border-white before:bg-white"></span>
-							<span>
-								Согласен на <a href="#" class="underline transition-all font-light duration-700 hover:no-underline">обработку персональных данных</a>
-							</span>
-						</span>
-					</label>
-					<small class="block text-left text-xs text-accent mt-1">Чтобы продолжить установите флажок</small>
-				</div>
+				{% include components/agree.html borderClass="border-white before:bg-white" %}
 			</form>
 		</div>
 	</div>

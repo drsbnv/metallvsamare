@@ -15,7 +15,7 @@ if (mix.inProduction()) {
     notify: false,
     open: true,
     port: 3000 ?? 80,
-    files: ['_site/**/*.*'],
+    files: ['_site/**/*.html'],
   });
 }
 
