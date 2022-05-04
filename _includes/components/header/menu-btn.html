@@ -2,8 +2,8 @@
 <button 
 	class="w-12 h-12 flex items-center justify-center border rounded-sm border-opacity-0 hover:border-opacity-100 transition-all duration-300 outline-none relative z-10" 
 	title="Меню"
-	@click="openMenu = !openMenu"
-	@keyup.escape="openMenu = false"
+	@click="$store.state.openMenu = !$store.state.openMenu"
+	@keyup.escape="$store.state.openMenu = false"
 	>
 	{% if name == 'open' %}
 	<svg  

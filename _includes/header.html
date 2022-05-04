@@ -25,7 +25,7 @@
 					components/button.html 
 					classes="btn-accent hidden sm:block" 
 					text="Заказать звонок" 
-					click="$refs.modalTitle.innerText='Обратная связь'; isModalOpen = true;"
+					click="$refs.modalTitle.innerText='Обратная связь'; $store.state.isModalOpen = true;"
 				%}
 				{% include components/header/menu-btn.html name="open" %}
 			</div>
@@ -35,9 +35,9 @@
 
 <div 
 	x-cloak
-	@keyup.escape="openMenu = false"
+	@keyup.escape="$store.state.openMenu = false"
 	class="site-menu fixed top-0 left-0 h-screen w-screen bg-deep bg-opacity-[.98] translate-x-[100%] transition-all duration-300 min-h-[500px] overflow-y-auto z-50"
-	:class="{'translate-x-0': openMenu}"
+	:class="{'translate-x-0': $store.state.openMenu}"
 	tabindex="0"
 >
 	<div class="container">

@@ -28,7 +28,7 @@
 			<p class="mt-3">{{ subtitle }}</p>
 			{% endif %}
 			<form class="grid grid-cols-3 gap-4 mt-10">
-				<input type="email" tabindex="-1" name="Email" placeholder="mail@example.com" class="hidden">
+				<input type="email" tabindex="-1" name="email" placeholder="mail@example.com" class="h-0 opacity-0 absolute">
 				<div class="form-group col-span-3 md:col-span-1" id="name">
 					<input type="text" name="name" placeholder="Ваше имя" class="bg-transparent outline-0 border border-white border-opacity-70 px-5 py-3 duration-300 font-light focus:border-opacity-100 w-full">
 				</div>
@@ -43,6 +43,7 @@
 					text="Отправить"
 					%}
 				</div>
+				<input type="checkbox" name="subscribe" value="1" class="h-0 opacity-0 absolute">
 				{% include components/agree.html borderClass="border-white before:bg-white" %}
 			</form>
 		</div>

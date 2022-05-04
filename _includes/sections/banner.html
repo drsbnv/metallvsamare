@@ -69,7 +69,7 @@
 
 				<div class="w-full flex flex-wrap items-end justify-between lg:block">
 
-					<input type="email" tabindex="-1" name="Email" placeholder="mail@example.com" class="hidden">
+					<input type="email" tabindex="-1" name="email" placeholder="mail@example.com" class="h-0 opacity-0">
 
 					<label class="form-group w-full md:w-[32%] lg:w-full block text-base font-medium mb-5 md:mb-0 lg:mb-4">
 						Имя
@@ -83,6 +83,7 @@
 						</div>
 					</label>
 
+					<input type="checkbox" name="subscribe" value="1" class="h-0 opacity-0 absolute">
 					{% include components/agree.html borderClass="border-black before:bg-black flex-shrink-0" %}
 
 					<button class="btn btn-accent w-full md:w-[32%] lg:w-full mt-5">Отправить</button>

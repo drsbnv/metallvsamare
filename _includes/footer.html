@@ -64,21 +64,21 @@
 <div
 class="overflow-y-auto"
 style="background-color: rgba(0,0,0,0.8)"
-x-show="isModalOpen"
-:class="{ 'fixed w-full h-full inset-0 z-50 flex items-start justify-center': isModalOpen }"
+x-show="$store.state.isModalOpen"
+:class="{ 'fixed w-full h-full inset-0 z-50 flex items-start justify-center': $store.state.isModalOpen }"
 >
 	<!-- dialog -->
 	<div
 	class="max-w-[450px] w-full bg-white shadow-2xl m-4 my-12 sm:m-8 px-5 p-4 sm:py-8 relative z-50"
-	x-show="isModalOpen"
-	@click.away="isModalOpen = false"
+	x-show="$store.state.isModalOpen"
+	@click.away="$store.state.isModalOpen = false"
 	>
-	<button class="absolute top-1 right-1 text-xl p-1 px-3" @click="isModalOpen = false;">&times;</button>
+	<button class="absolute top-1 right-1 text-xl p-1 px-3" @click="$store.state.isModalOpen = false;">&times;</button>
 	<h3 class="text-2xl text-center mb-2" x-ref="modalTitle"></h3>
 	<p class="text-center mb-6">Оставьте свои данные и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время</p>
 
 	<form>
-		<input type="email" tabindex="-1" name="Email" placeholder="mail@example.com" class="hidden">
+		<input type="email" tabindex="-1" name="email" placeholder="mail@example.com" class="h-0 opacity-0">
 		<div class="form-group mb-5">
 			<input type="text" class="text-base px-5 py-3 border border-gray-300 block rounded-0 outline-none w-full duration-300 placeholder-gray-600::placeholder focus:border-deep" name="name" placeholder="Ваше имя">
 		</div>
@@ -86,11 +86,35 @@ x-show="isModalOpen"
 			<input type="text" class="text-base px-5 py-3 border border-gray-300 block rounded-0 outline-none w-full duration-300 placeholder-gray-600::placeholder focus:border-deep" name="phone" placeholder="Ваш телефон">
 			<small class="block text-left text-xs text-accent mt-1 font-normal hidden">Поле обязательно для заполнения</small>
 		</div>
-
+		<input type="checkbox" name="subscribe" value="1" class="h-0 opacity-0 absolute">
 		{% include components/agree.html borderClass="border-black before:bg-black flex-shrink-0" %}
-
 		<button class="btn btn-accent w-full md:w-[32%] lg:w-full mt-5">Отправить</button>
 	</form>
 
 	</div><!-- /dialog -->
 </div><!-- /overlay -->
+
+<!-- overlay -->
+	<div
+		class="overflow-y-auto"
+		id="response_modal"
+		style="background-color: rgba(0,0,0,0.8)"
+		x-show="$store.state.isResponseModalOpen"
+		:class="{ 'fixed inset-0 z-50 flex items-start justify-center': $store.state.isResponseModalOpen }"
+	>
+	<!-- dialog -->
+		<div
+			class="max-w-[450px] w-full bg-white shadow-2xl m-4 my-12 sm:m-8 px-5 p-4 sm:py-8 relative z-50"
+			x-show="$store.state.isResponseModalOpen"
+			@click.away="$store.state.isResponseModalOpen = false"
+		>
+			<button class="absolute top-1 right-1 text-xl p-1 px-3" @click="$store.state.isResponseModalOpen = false;">&times;</button>
+			<h3 class="text-2xl text-center mb-5"></h3>
+
+			<div class="content text-center">
+				<p></p>
+			</div>
+
+
+		</div><!-- /dialog -->
+	</div><!-- /overlay -->

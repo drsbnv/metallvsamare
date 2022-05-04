@@ -4,9 +4,9 @@
 
 <body 
 class="relative" 
-x-data="data"
-@keydown.escape="isModalOpen = false"
-:class="{'overflow-hidden md:pr-[17px]': isModalOpen || isResponseModalOpen}"
+x-data
+@keydown.escape="$store.state.isModalOpen = false"
+:class="{'overflow-hidden md:pr-[17px]': $store.state.isModalOpen || $store.state.isResponseModalOpen}"
 >
 
 	{%- include header.html -%}
