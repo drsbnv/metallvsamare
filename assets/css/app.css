@@ -576,6 +576,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-10 {
   margin-bottom: 2.5rem;
 }
+.mb-8 {
+  margin-bottom: 2rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
 .block {
   display: block;
 }
@@ -1000,6 +1006,10 @@ body {
 
 .content p {
   margin-bottom: 1.25rem;
+}
+.content h5 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
 .galary .swiper-pagination-bullet {

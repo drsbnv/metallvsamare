@@ -21,7 +21,7 @@
 					</li>
 					{% endfor %}
 					<li>
-						<a class="inline-block leading-tight transition-all duration-200 hover:underline {% if page.url == link.url %}underline{% endif %}" href="{{site.baseurl}}#">Политика конфиденциальности</a>
+						<a class="inline-block leading-tight transition-all duration-200 hover:underline {% if page.url == link.url %}underline{% endif %}" href="{{site.baseUrl}}/policy/">Политика конфиденциальности</a>
 					</li>
 				</ul>
 			</div>
@@ -78,7 +78,7 @@ x-show="$store.state.isModalOpen"
 	<p class="text-center mb-6">Оставьте свои данные и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время</p>
 
 	<form>
-		<input type="email" tabindex="-1" name="email" placeholder="mail@example.com" class="h-0 opacity-0">
+		<input type="email" tabindex="-1" name="email" placeholder="mail@example.com" class="h-0 opacity-0 absolute">
 		<div class="form-group mb-5">
 			<input type="text" class="text-base px-5 py-3 border border-gray-300 block rounded-0 outline-none w-full duration-300 placeholder-gray-600::placeholder focus:border-deep" name="name" placeholder="Ваше имя">
 		</div>
