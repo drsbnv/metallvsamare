@@ -3113,9 +3113,10 @@ document.querySelectorAll("form").forEach(function (form) {
                   var param = pair.split("=");
                   formData.append(param[0], param[1]);
                 });
-              }
+              } // fetch('https://diywebdev.ru/lead/dev/', {
 
-              _context.t1 = fetch('https://diywebdev.ru/lead/dev/', {
+
+              _context.t1 = fetch('https://alexsab.ru/lead/metallvsamare', {
                 method: 'POST',
                 body: formData
               }).then(function (res) {

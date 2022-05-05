@@ -582,6 +582,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-4 {
   margin-bottom: 1rem;
 }
+.ml-4 {
+  margin-left: 1rem;
+}
+.mr-4 {
+  margin-right: 1rem;
+}
 .block {
   display: block;
 }
@@ -807,6 +813,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .p-1 {
   padding: 0.25rem;
 }
+.p-0 {
+  padding: 0px;
+}
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -838,6 +847,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .\!px-5 {
   padding-left: 1.25rem !important;
   padding-right: 1.25rem !important;
+}
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .pr-5 {
   padding-right: 1.25rem;
@@ -1936,6 +1949,14 @@ section.callback ::placeholder {
     margin: 2rem;
   }
 
+  .sm\:ml-0 {
+    margin-left: 0px;
+  }
+
+  .sm\:mr-0 {
+    margin-right: 0px;
+  }
+
   .sm\:block {
     display: block;
   }
@@ -1947,6 +1968,16 @@ section.callback ::placeholder {
   .sm\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .sm\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .sm\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .sm\:text-lg {

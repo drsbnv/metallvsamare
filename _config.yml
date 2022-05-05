@@ -18,22 +18,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 plugins:
   - jekyll-feed
-  # - jekyll-sitemap
+  - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-paginate-v2
-  # - jekyll-datapage-generator
-
-# category_dir: works
-# pagination:
-#   enabled: true
-#   per_page: 3
-#   title: ':title - Страница :num'
-#   limit: 0
-#   sort_field: 'date'
-#   sort_reverse: true
-#   trail:
-#     before: 2
-#     after: 2
 
 exclude:
   - README.md
@@ -50,10 +36,3 @@ collections:
   work-categories:
     output: true
     permalink: /:path/
-
-# defaults:
-#   - scope:
-#       type: "pages"  # select all category pages
-#     values:
-#       layout: "single"
-#       permalink: works/:path/

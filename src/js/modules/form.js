@@ -90,7 +90,8 @@ document.querySelectorAll("form").forEach(function(form) {
 				formData.append(param[0], param[1]);
 			});
 		}
-		fetch('https://diywebdev.ru/lead/dev/', {
+		// fetch('https://diywebdev.ru/lead/dev/', {
+		fetch('https://alexsab.ru/lead/metallvsamare', {
 			method: 'POST',
 			body: formData,
 		})
