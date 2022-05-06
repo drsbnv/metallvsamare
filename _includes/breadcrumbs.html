@@ -9,7 +9,7 @@
 	<span class="truncate">{{ page.title }}</span>
   {% else %}
 	<span>{% include components/icons/chevron-right.html stroke=stroke %}</span>
-	<a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">
+	<a href="{{site.baseurl}}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">
 	{% assign eng = crumb | replace:'-',' ' | remove:'.html' %}
 	{% case eng %}
 		{% when 'lestnicy' %}
