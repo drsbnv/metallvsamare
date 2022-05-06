@@ -1,6 +1,7 @@
 {% assign container = include.container %}
 {% assign data = include.data %}
 {% assign limit = include.limit %}
+{% assign h1 = include.h1 %}
 {% assign size = data | size %}
 {% assign splitUrl = page.url | split: '/' %}
 {% if splitUrl %}
@@ -26,7 +27,11 @@
 {% if size > 0 %}
 <section class="works py-20">
 	{% if title %}
-	<h2 class="text-center font-bold text-2xl md:text-4xl px-4">{{ title }}</h2>		
+		{% if h1 %}
+		<h1 class="text-center font-bold text-2xl md:text-4xl px-4">{{ title }}</h1>
+		{% else %}
+		<h2 class="text-center font-bold text-2xl md:text-4xl px-4">{{ title }}</h2>
+		{% endif %}		
 	{% endif %}
 	{% if subtitle %}
 	<p class="section-subtitle text-center px-4 mt-4 md:text-xl">{{ subtitle }}</p>

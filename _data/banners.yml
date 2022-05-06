@@ -2,6 +2,6 @@ home:
   - title: Когда другие отдыхают, <br class="hidden lg:block">мы работаем!
     subtitle: Не стесняйтесь <span class="text-accent">звонить</span><br class="block sm:hidden"> нам в выходные
     img: img/banners/1.jpg
-kovka:
-  - title: Работы с элементами ковки
-    img: ""
+breadcrumbs:
+  - url: ""
+    title: ""

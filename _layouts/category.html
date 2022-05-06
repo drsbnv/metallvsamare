@@ -1,7 +1,5 @@
 ---
 layout: default
-pagination:
-  enabled: true
 ---
 {% assign curworks = '' | split: '' %}
 {% for element in site.data.works %}
@@ -12,11 +10,18 @@ pagination:
 {% assign first = curworks | first %}
 {% assign dir = first.categories | split: ',' %}
 {% assign img = 'img/' | append: dir[0] | append: '/' | append: first.uid | append: '/' | append: first.photo %}
-{% include sections/banner.html title=page.h1 subtitle=page.subtitle img=img h1=true %}
+{% include 
+sections/banner.html 
+title=page.h1 
+subtitle=page.subtitle 
+img=img 
+h1=true
+breadcrumbs=true
+%}
 <section class="pt-20 content">
 	<div class="container">
 		{{ content }}		
 	</div>
 </section>
-{% include sections/works.html container=true data=curworks limit=1000%}
+{% include sections/works.html container=true data=curworks limit=1000 %}
 {% include sections/callback-block.html classes="mb-10" %}
