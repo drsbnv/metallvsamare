@@ -2,7 +2,7 @@
 {% assign stroke = include.stroke %}
 <div id="breadcrumbs" class="flex items-center gap-1 sm:gap-2 text-xs sm:text-base {{color}}">
 {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
-<a href="/">Главная</a>
+<a href="{{site.baseurl}}/">Главная</a>
 {% for crumb in crumbs offset: 1 %}
   {% if forloop.last %}
 	<span>{% include components/icons/chevron-right.html stroke=stroke %}</span>
