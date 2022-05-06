@@ -1,5 +1,11 @@
 {% assign color = include.color %}
 {% assign stroke = include.stroke %}
+{% assign baseurl = site.baseurl %}
+{% if baseurl != '' %}
+	{% assign url = baseurl %}
+{% else %}
+	{% assign url = '' %}
+{% endif %}
 <div id="breadcrumbs" class="flex items-center gap-1 sm:gap-2 text-xs sm:text-base {{color}}">
 {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
 <a href="{{site.baseurl}}/">Главная</a>
@@ -9,7 +15,7 @@
 	<span class="truncate">{{ page.title }}</span>
   {% else %}
 	<span>{% include components/icons/chevron-right.html stroke=stroke %}</span>
-	<a href="{{site.baseurl}}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">
+	<a href="{{url}}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">
 	{% assign eng = crumb | replace:'-',' ' | remove:'.html' %}
 	{% case eng %}
 		{% when 'lestnicy' %}
