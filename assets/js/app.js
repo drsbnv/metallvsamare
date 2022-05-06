@@ -2964,7 +2964,21 @@ window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 
 __webpack_require__(/*! ./modules/data */ "./src/js/modules/data.js");
 
-alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
+alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start(); // Native image lazy-loading for the web!
+// https://dev.to/prototyp/best-way-to-lazy-load-images-for-maximum-performance-27o1
+
+var images = document.querySelectorAll('img[loading="lazy"]');
+
+if ("loading" in HTMLImageElement.prototype) {
+  images.forEach(function (img) {
+    img.src = img.dataset.src;
+  });
+} else {
+  images.forEach(function (img) {
+    img.src = img.dataset.src;
+  });
+  console.log('No supported');
+}
 
 /***/ }),
 
