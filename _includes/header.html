@@ -2,38 +2,38 @@
 	<div class="container">
 		<div class="flex items-center justify-between h-[70px] md:h-[85px]">
 			{% include components/header/logo.html %}
-			{% include 
-				components/address.html 
-				classes="text-lg font-light hidden xl:flex" 
-				classesIcon="w-5 h-auto fill-[#fff]" 
+			{% include
+				components/address.html
+				classes="text-lg font-light hidden xl:flex"
+				classesIcon="w-5 h-auto fill-[#fff]"
 				address=site.address
 			%}
 			<div class="flex flex-col gap-1">
 				{% for phone in site.phones %}
 					{% if forloop.first == false %}
-						{% include 
-							components/phone-link.html 
-							classes="sm:text-lg" 
-							classesIcon="w-5 h-auto fill-[#fff]" 
-							phone=phone 
+						{% include
+							components/phone-link.html
+							classes="sm:text-lg"
+							classesIcon="w-5 h-auto fill-[#fff]"
+							phone=phone
 						%}
 					{% endif %}
 				{% endfor %}
 			</div>
 			<div class="flex items-center gap-3">
-				{% include 
-					components/button.html 
-					classes="btn-accent hidden sm:block" 
-					text="Заказать звонок" 
+				{% include
+					components/button.html
+					classes="btn-accent hidden sm:block"
+					text="Заказать звонок"
 					click="$refs.modalTitle.innerText='Обратная связь'; $store.state.isModalOpen = true;"
 				%}
 				{% include components/header/menu-btn.html name="open" %}
 			</div>
 		</div>
-	</div>		
+	</div>
 </header>
 
-<div 
+<div
 	x-cloak
 	@keyup.escape="$store.state.openMenu = false"
 	class="site-menu fixed top-0 left-0 h-screen w-screen bg-deep bg-opacity-[.98] translate-x-[100%] transition-all duration-300 min-h-[500px] overflow-y-auto z-50"
@@ -42,7 +42,7 @@
 >
 	<div class="container">
 		<div class="flex justify-end mt-3 md:mt-5">
-			{% include components/header/menu-btn.html name="close" %}			
+			{% include components/header/menu-btn.html name="close" %}
 		</div>
 		<ul class="mt-[-80px] h-full w-full left-0 text-white flex flex-col justify-center absolute">
 			{% if page.url != '/' %}
@@ -58,5 +58,5 @@
 			{% endfor %}
 		</ul>
 	</div>
-	
+
 </div>

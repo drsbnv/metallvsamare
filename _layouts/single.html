@@ -17,9 +17,9 @@ layout: default
 				<div class="galary-slide swiper-slide">
 					<img data-src="{{img | relative_url }}" class="swiper-lazy" />
 					<div class="swiper-lazy-preloader"></div>
-				</div>		
+				</div>
 				{% endfor %}
-			</div>	
+			</div>
 			<div class="swiper-pagination"></div>
 		</div>
 	</div>
@@ -29,8 +29,8 @@ layout: default
 {% if contentSize > 0 %}
 <section class="py-10 content">
 	<div class="container">
-		{{ content }}		
+		{{ content }}
 	</div>
 </section>
 {% endif %}
-{% include sections/callback-block.html classes="mb-10" %}
+{% include sections/callback-block.html %}

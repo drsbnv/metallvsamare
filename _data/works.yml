@@ -6,7 +6,7 @@
   photo_thumb: 252d9b7ece43af34b6dae664a6e22143.jpg
   photo: 6e8df1dc11092d280219ecf72dd5acb0.jpg
   photos: 1f44f3bf7e25fab6b0db35d8873846d3.jpg,9c1c4806f2a6a5b8121d36ab4d211d6e.jpg
-  text: Seo текст на странице. Краткое или детальное описание выполненной работы. 
+  text: Seo текст на странице. Краткое или детальное описание выполненной работы.
 - title: Лестница Новый Буян
   short_title: Лестница Новый Буян
   uid: stairs-novyy-buyan
@@ -502,7 +502,7 @@
   date: 17.08.2016
   photo_thumb: 0d9037643778e30431911c1298f75149.jpg
   photo: 1c254c74674829b952e4a4901eb10425.jpg
-  photos: 
+  photos:
 - title: Забор из проф листа. Самара, 5 просека
   short_title: Забор из проф листа
   uid: the-fence-from-prof-sheet-samara-5-glade
@@ -510,7 +510,7 @@
   date: 17.08.2016
   photo_thumb: ead6b56ffd65ca5e54bc3c92b735bd28.jpg
   photo: e3062bd25f09baa7ca65d255c8213891.jpg
-  photos: 
+  photos:
 - title: Крыльцо и решетка на балкон. Самара, Красная Глинка
   short_title: Крыльцо и решетка на балкон
   uid: porch-and-lattice-on-the-balcony-samara-krasnaya-glinka
@@ -526,7 +526,7 @@
   date: 26.07.2016
   photo_thumb: f90c2d759392e9525e0510051ab319c6.jpg
   photo: 6cff9d57fc35068c3fa1605e07a0343b.jpg
-  photos: 
+  photos:
 - title: Стол с коваными розами
   short_title: Стол с коваными розами
   uid: table-with-wrought-iron-roses
@@ -734,4 +734,4 @@
   date: 10.08.2015
   photo_thumb: 214ea1ea5ba9fae13c7cf9401dc7da86.jpg
   photo: 721b6844cbffef6f5247b8c60bd9426e.jpg
-  photos: 
+  photos:

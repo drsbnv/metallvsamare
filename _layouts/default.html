@@ -2,8 +2,8 @@
 <html lang="{{ page.lang | default: site.lang | default: 'ru' }}">
 {%- include head.html -%}
 
-<body 
-class="relative" 
+<body
+class="relative"
 x-data
 @keydown.escape="$store.state.isModalOpen = false"
 :class="{'overflow-hidden md:pr-[17px]': $store.state.isModalOpen || $store.state.isResponseModalOpen}"
@@ -18,7 +18,7 @@ x-data
 	{%- include footer.html -%}
 
 	<script src="{{ './assets/js/app.js' | relative_url }}"></script>
-	
+
 </body>
 
 </html>

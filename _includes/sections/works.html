@@ -7,20 +7,20 @@
 {% if splitUrl %}
 	{% assign url = splitUrl[1] %}
 {% endif %}
-{% case url %} 
-{% when 'lestnicy' %} 
+{% case url %}
+{% when 'lestnicy' %}
 {% assign title = "Эксперты по металлокаркасам лестниц в Самаре" %}
 {% assign subtitle = "Мы выполним для Вас каркас лестницы любой сложности в кратчайшие сроки!" %}
-{% when 'navesy' %} 
+{% when 'navesy' %}
 {% assign title = "Эксперты по металлическим навесам в Самаре" %}
 {% assign subtitle = "Мы разработаем, изготовим и смонтируем Ваш идеальный навес в кратчайшие сроки!" %}
-{% when 'zabory' %} 
+{% when 'zabory' %}
 {% assign title = "Эксперты по металлическим заборам в Самаре" %}
 {% assign subtitle = "Огородим любую территорию забором от проф.листа до кованого в кратчайшие сроки!" %}
-{% when 'kovka' %} 
+{% when 'kovka' %}
 {% assign title = "Эксперты по ковке в Самаре" %}
 {% assign subtitle = "Мы выполним для Вас любую работу с элементами ковки в кратчайшие сроки!" %}
-{% else %} 
+{% else %}
 {% assign title = "Эксперты по металлоконструкциям в Самаре" %}
 {% assign subtitle = "Мы выполним для вас работы любой сложности в кратчайшие сроки!" %}
 {% endcase %}
@@ -31,7 +31,7 @@
 		<h1 class="text-center font-bold text-2xl md:text-4xl px-4">{{ title }}</h1>
 		{% else %}
 		<h2 class="text-center font-bold text-2xl md:text-4xl px-4">{{ title }}</h2>
-		{% endif %}		
+		{% endif %}
 	{% endif %}
 	{% if subtitle %}
 	<p class="section-subtitle text-center px-4 mt-4 md:text-xl">{{ subtitle }}</p>
@@ -46,8 +46,8 @@
 		{% for work in data limit:limit %}
 		{% assign catUrl = work.categories | split: ',' | first %}
 		{% assign img = 'img/thumbs/' | append: work.photo_thumb %}
-		<a 
-			href="{{site.baseurl}}/{{catUrl}}/{{work.uid}}" 
+		<a
+			href="{{site.baseurl}}/{{catUrl}}/{{work.uid}}"
 			class="work-item relative overflow-hidden text-white group w-[60%] md:w-[40%] lg:w-auto flex-shrink-0 {% if forloop.first %}ml-4 sm:ml-0{% endif %}{% if forloop.last %}mr-4 sm:mr-0{% endif %}"
 		>
 			<img data-src="{{ img | relative_url }}" alt="{{work.short_title}}" loading="lazy" class="work-img absolute h-full w-full object-cover object-center">
@@ -61,12 +61,12 @@
 				<span class="btn btn-accent !px-5 text-xs md:text-sm mb-6">Подробнее</span>
 			</span>
 		</a>
-		{% endfor %}	
+		{% endfor %}
 	</div>
 	<!-- <div class="text-center mt-8">
-		{% include 
-		components/button.html 
-		classes="btn-accent" 
+		{% include
+		components/button.html
+		classes="btn-accent"
 		text="Показать еще"
 		%}
 	</div> -->

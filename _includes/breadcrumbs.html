@@ -10,12 +10,12 @@
 {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
 <a href="{{site.baseurl}}/">Главная</a>
 {% for crumb in crumbs offset: 1 %}
-  {% if forloop.last %}
+	{% if forloop.last %}
 	<span>{% include components/icons/chevron-right.html stroke=stroke %}</span>
 	<span class="truncate">{{ page.title }}</span>
-  {% else %}
+	{% else %}
 	<span>{% include components/icons/chevron-right.html stroke=stroke %}</span>
-	<a href="{{url}}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">
+	<a href="{{url}}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">
 	{% assign eng = crumb | replace:'-',' ' | remove:'.html' %}
 	{% case eng %}
 		{% when 'lestnicy' %}
@@ -31,6 +31,6 @@
 	{% endcase %}
 	{{ru}}
 	</a>
-  {% endif %}
+	{% endif %}
 {% endfor %}
 </div>
