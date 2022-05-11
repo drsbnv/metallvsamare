@@ -1871,9 +1871,8 @@ button.swiper-pagination-bullet {
 @media (min-width: 1024px) {
 
   .work-item:hover .work-img {
-    --tw-rotate: -6deg;
-    --tw-scale-x: 1.5;
-    --tw-scale-y: 1.5;
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 

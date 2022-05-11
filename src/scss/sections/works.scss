@@ -3,7 +3,7 @@
 	&:hover{
 		.work-img{
 			// transform: scale(1.4) rotate(-5deg);
-			@apply lg:-rotate-6 lg:scale-150;
+			@apply lg:scale-110;
 		}
 		&:after{
 			@apply lg:bg-opacity-80;
