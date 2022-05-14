@@ -2,6 +2,7 @@
 {% assign phone = include.phone %}
 {% assign classIcon = include.classesIcon %}
 <a
+	itemprop="telephone"
 	href="tel:{% include utils/phonef.html phone=phone %}"
 	class="flex items-center gap-1 {{class}}"
 >

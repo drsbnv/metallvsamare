@@ -1,6 +1,6 @@
 <header class="site-header sticky w-full top-0 left-0 text-white bg-deep transition-all duration-300 z-20">
 	<div class="container">
-		<div class="flex items-center justify-between h-[70px] md:h-[85px]">
+		<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" class="flex items-center justify-between h-[70px] md:h-[85px]">
 			{% include components/header/logo.html %}
 			{% include
 				components/address.html
@@ -44,16 +44,16 @@
 		<div class="flex justify-end mt-3 md:mt-5">
 			{% include components/header/menu-btn.html name="close" %}
 		</div>
-		<ul class="mt-[-80px] h-full w-full left-0 text-white flex flex-col justify-center absolute">
+		<ul itemscope itemtype="http://schema.org/SiteNavigationElement" class="mt-[-80px] h-full w-full left-0 text-white flex flex-col justify-center absolute">
 			{% if page.url != '/' %}
 				<li>
-					<a class="block text-center p-5 uppercase text-lg transition-all duration-200" href="{{site.baseurl}}/">Главная</a>
+					<a itemprop="url" class="block text-center p-5 uppercase text-lg transition-all duration-200" href="{{site.baseurl}}/">Главная</a>
 				</li>
 			{% endif %}
 			{% assign categories = site.work-categories | sort: "index" %}
 			{% for link in categories %}
 				<li>
-					<a class="block text-center p-5 uppercase text-lg transition-all duration-200 {% if page.url == link.url %}active{% endif %}" href="{{site.baseurl}}{{link.url}}">{{link.title}}</a>
+					<a itemprop="url" class="block text-center p-5 uppercase text-lg transition-all duration-200 {% if page.url == link.url %}active{% endif %}" href="{{site.baseurl}}{{link.url}}">{{link.title}}</a>
 				</li>
 			{% endfor %}
 		</ul>
