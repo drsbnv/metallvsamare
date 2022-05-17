@@ -1,10 +1,13 @@
 ---
 layout: default
 ---
+<div itemscope itemtype="http://schema.org/Article">
 {% assign dir = page.categories | split: ',' %}
 {% assign imgDir = 'img/' | append: dir[0] | append: '/' | append: page.uid | append: '/' %}
 {% assign photo = imgDir | append: page.photo %}
 {% include sections/banner.html title=page.title img=photo h1=true breadcrumbs=true %}
+<time itemprop="datePublished" datetime="{{page.date}}"></time>
+<img itemprop="image" src="{{site.url}}/{{photo}}" class="hidden" />
 {% assign photos = page.photos | split: ',' %}
 {% assign photosSize = photos | size %}
 {% if photosSize > 0 %}
@@ -29,8 +32,11 @@ layout: default
 {% if contentSize > 0 %}
 <section class="py-10 content">
 	<div class="container">
+		<article itemprop="articleBody">
 		{{ content }}
+		</article>
 	</div>
 </section>
 {% endif %}
 {% include sections/callback-block.html %}
+</div>

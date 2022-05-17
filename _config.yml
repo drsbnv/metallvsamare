@@ -15,6 +15,13 @@ baseurl: "/metallvsamare"
 # baseurl: ""
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+# FOR SCHEMA.ORG
+postalCode: "443079"
+addressCountry: "Россия"
+addressRegion: "Самарская область"
+addressLocality: "Самара"
+streetAddress: "ул. Революционная, 101 А"
+
 
 plugins:
   - jekyll-feed

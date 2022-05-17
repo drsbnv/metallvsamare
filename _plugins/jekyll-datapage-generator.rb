@@ -22,6 +22,7 @@ module Jekyll
         page = Jekyll::DataPage.new(site, site.source, dir[0], name)
         page.data['layout'] = 'single'
         page.data['title'] = data['title']
+        page.data['date'] = data['date']
         page.data['categories'] = data['categories']
         page.data['uid'] = data['uid']
         page.data['photo'] = data['photo']

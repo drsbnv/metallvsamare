@@ -1,0 +1,16 @@
+<div itemscope itemtype="http://schema.org/Organization" class="hidden">
+	<meta itemprop="name" content="{{ site.title }}" />
+	<img itemprop="logo" src="{{ 'img/logo_only.png' | relative_url }}" alt="{{ site.title }}" />
+	<link itemprop="url" href="https://xn--80aaagne2bafg9bii.xn--p1ai/">
+	<div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+		<span itemprop="postalCode">{{ site.postalCode }}</span>,
+		<span itemprop="addressCountry">{{ site.addressCountry }}</span>, 
+		<span itemprop="addressRegion">{{ site.addressRegion }}</span>, 
+		<span itemprop="addressLocality">{{ site.addressLocality }}</span>, 
+		<span itemprop="streetAddress">{{ site.streetAddress }}</span>
+	</div>
+	{% for phone in site.phones %}
+	<meta itemprop="telephone" content="{{ phone }}" /></a>
+	{% endfor %}
+	<meta itemprop="email" content="{{ site.email }}" />
+</div>

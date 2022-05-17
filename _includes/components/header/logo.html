@@ -1,16 +1,13 @@
 {% if page.url == '/' %}
-<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject" class="logo flex items-center">
+<div class="logo flex items-center">
 {% else %}
 <a href="{{site.baseurl}}/" class="logo flex items-center">
 {% endif %}
 	<img
-		itemprop="url image"
 		src="{{ 'img/logo_only.png' | relative_url }}"
 		class="select-none"
 		alt="{{ site.title }}"
 	>
-	<meta itemprop="width" content="60">
-    <meta itemprop="height" content="50">
 	<span class="uppercase font-bold text-2xl select-none font-['Roboto_Condensed']">Металлвсамаре</span>
 {% if page.url == '/' %}
 </div>

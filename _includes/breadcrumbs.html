@@ -6,31 +6,39 @@
 {% else %}
 	{% assign url = '' %}
 {% endif %}
-<div id="breadcrumbs" class="flex items-center gap-1 sm:gap-2 text-xs sm:text-base {{color}}">
+<ul id="breadcrumbs" class="flex items-center gap-1 sm:gap-2 text-xs sm:text-base {{color}}" itemscope itemtype="http://schema.org/BreadcrumbList">
 {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
-<a href="{{site.baseurl}}/">Главная</a>
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+	<a itemprop="item" href="{{site.url}}">
+		<span itemprop="name">Главная</span>
+		<meta itemprop="position" content="1">
+	</a>
+</li>
 {% for crumb in crumbs offset: 1 %}
 	{% if forloop.last %}
 	<span>{% include components/icons/chevron-right.html stroke=stroke %}</span>
 	<span class="truncate">{{ page.title }}</span>
 	{% else %}
 	<span>{% include components/icons/chevron-right.html stroke=stroke %}</span>
-	<a href="{{url}}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">
-	{% assign eng = crumb | replace:'-',' ' | remove:'.html' %}
-	{% case eng %}
-		{% when 'lestnicy' %}
-		{% assign ru = 'Лестницы' %}
-		{% when 'navesy' %}
-		{% assign ru = 'Навесы' %}
-		{% when 'zabory' %}
-		{% assign ru = 'Заборы' %}
-		{% when 'kovka' %}
-		{% assign ru = 'Ковка' %}
-		{% when 'nestandartnye zakazy' %}
-		{% assign ru = 'Нестандартные заказы' %}
-	{% endcase %}
-	{{ru}}
-	</a>
+	<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+		<a itemprop="item" href="{{url}}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">
+		{% assign eng = crumb | replace:'-',' ' | remove:'.html' %}
+		{% case eng %}
+			{% when 'lestnicy' %}
+			{% assign ru = 'Лестницы' %}
+			{% when 'navesy' %}
+			{% assign ru = 'Навесы' %}
+			{% when 'zabory' %}
+			{% assign ru = 'Заборы' %}
+			{% when 'kovka' %}
+			{% assign ru = 'Ковка' %}
+			{% when 'nestandartnye zakazy' %}
+			{% assign ru = 'Нестандартные заказы' %}
+		{% endcase %}
+		<span itemprop="name">{{ru}}</span>
+		<meta itemprop="position" content="2">
+		</a>
+	</li>
 	{% endif %}
 {% endfor %}
-</div>
+</ul>

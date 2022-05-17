@@ -1,9 +1,11 @@
-<footer class="site-footer bg-black py-10 lg:py-16 text-white font-light text-opacity-90">
+<footer class="site-footer bg-black py-10 lg:py-16 text-white font-light text-opacity-90" itemscope itemtype="http://schema.org/WPFooter">
 	<div class="container">
 		<div class="grid grid-cols-6 gap-y-10">
 			<div class="footer-col col-span-6 lg:col-span-2">
 				{% include components/header/logo.html %}
 				<p class="mt-3 text-sm">Надежные металлические конструкции</p>
+				<meta itemprop="copyrightYear" content='{{ site.time | date: "%Y"}}'>
+				<meta itemprop="copyrightHolder" content="{{ site.title }}">
 				<p class="text-sm mt-5 hidden lg:block">&copy; {{ site.time | date: "%Y"}} «Металлвсамаре»</p>
 			</div>
 			<div class="footer-col col-span-6 sm:col-span-3 lg:col-span-2">
@@ -59,6 +61,8 @@
 		</div>
 	</div>
 </footer>
+
+{% include components/organization.html %}
 
 <!-- overlay -->
 <div
