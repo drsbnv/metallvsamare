@@ -10,14 +10,12 @@
 			%}
 			<div class="flex flex-col gap-1">
 				{% for phone in site.phones %}
-					{% if forloop.first == false %}
-						{% include
-							components/phone-link.html
-							classes="sm:text-lg"
-							classesIcon="w-5 h-auto fill-[#fff]"
-							phone=phone
-						%}
-					{% endif %}
+					{% include
+						components/phone-link.html
+						classes="sm:text-lg"
+						classesIcon="w-5 h-auto fill-[#fff]"
+						phone=phone
+					%}
 				{% endfor %}
 			</div>
 			<div class="flex items-center gap-3">

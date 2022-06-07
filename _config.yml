@@ -3,24 +3,23 @@ encoding: bom|utf-8
 title: Металлвсамаре
 email: sammetok@yandex.ru
 phones:
-  - 8 (927) 011 06 27
   - 8 (927) 260 02 77
   - 8 (846) 990 02 77
-address: "Самара, ул. Революционная, 101 А"
+address: "пгт. Смышляевка, ул.Аэропорт-2, литер Ж"
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "/metallvsamare"
-# baseurl: ""
+# baseurl: "/metallvsamare"
+baseurl: ""
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # FOR SCHEMA.ORG
-postalCode: "443079"
+postalCode: "443046"
 addressCountry: "Россия"
 addressRegion: "Самарская область"
 addressLocality: "Самара"
-streetAddress: "ул. Революционная, 101 А"
+streetAddress: "ул.Аэропорт-2, литер Ж"
 
 
 plugins:
