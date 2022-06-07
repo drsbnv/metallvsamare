@@ -17,8 +17,10 @@ layout: default
 			<div class="swiper-wrapper pb-12">
 				{% for photo in photos %}
 				{% assign img = imgDir | append: photo %}
-				<div class="galary-slide swiper-slide">
-					<img data-src="{{img | relative_url }}" class="swiper-lazy" />
+				<div class="galary-slide swiper-slide h-full">
+					<a data-fslightbox href="{{img | relative_url}}">
+						<img data-src="{{img | relative_url}}" class="swiper-lazy" />
+					</a>
 					<div class="swiper-lazy-preloader"></div>
 				</div>
 				{% endfor %}

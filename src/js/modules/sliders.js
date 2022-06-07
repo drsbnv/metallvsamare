@@ -1,4 +1,4 @@
-import Swiper, {Lazy, Pagination, Navigation, EffectFade} from 'swiper';
+import Swiper, { Lazy, Pagination, Navigation, EffectFade } from 'swiper';
 
 Swiper.use([Lazy, Pagination, Navigation, EffectFade]);
 
@@ -15,7 +15,7 @@ const initSlider = (num = 0, loop) => {
 		initialSlide: num,
 		effect: 'fade',
 		fadeEffect: {
-			crossFade: true 
+			crossFade: true
 		},
 		navigation: {
 			nextEl: '.swiper-button-next',
@@ -57,6 +57,7 @@ const galarySlider = new Swiper('.galary-slider', {
 		el: '.swiper-pagination',
 		type: 'bullets', //'bullets' | 'fraction' | 'progressbar' | 'custom'
 		clickable: true,
+		dynamicBullets: true,
 	},
 	breakpoints: {
 		320: {
@@ -67,7 +68,21 @@ const galarySlider = new Swiper('.galary-slider', {
 			slidesPerView: 2,
 		},
 		1024: {
-			slidesPerView: 3,
+			slidesPerView: 4,
 		},
-	}
+	},
 })
+
+galarySlider.on('lazyImageReady', function (swiper, slideEl, imageEl) {
+	setTimeout(() => {
+		const parent = document.querySelector('.galary-slider');
+		const active = parent.querySelector('.swiper-slide-active');
+		const slides = parent.querySelectorAll('.galary-slide');
+		const height = active.clientHeight;
+		slides.forEach(slide => {
+			slide.style.minHeight = `${height}px`;
+		})
+	}, 100)
+});
+
+require('fslightbox');
