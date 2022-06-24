@@ -14,7 +14,7 @@ if (mix.inProduction()) {
     proxy: '127.0.0.1:4000',
     notify: false,
     open: true,
-    port: 3000 ?? 80,
+    port: 3000,
     files: ['_site/**/*.html'],
   });
 }

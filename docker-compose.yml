@@ -6,6 +6,6 @@ services:
     container_name: jekyll_bundle
     command: jekyll serve --trace --watch --force_polling
     ports:
-      - 4000:4000
+      - 4001:4000
     volumes:
       - .:/srv/jekyll
