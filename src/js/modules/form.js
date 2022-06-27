@@ -92,8 +92,14 @@ document.querySelectorAll("form").forEach(function(form) {
 		}
 		// fetch('https://diywebdev.ru/lead/dev/', {
 		fetch('https://alexsab.ru/lead/metallvsamare', {
-			mode: 'cors',
 			method: 'POST',
+			mode: 'cors',
+			cache: 'no-cache',
+			credentials: 'same-origin',
+			headers: {
+				'Content-Type': 'application/json'
+				// 'Content-Type': 'application/x-www-form-urlencoded',
+			},
 			body: formData,
 		})
 		.then(res => res.json())
