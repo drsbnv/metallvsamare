@@ -18,7 +18,7 @@ function maskphone(e) {
 		this.parentElement.querySelector('small').classList.remove('hidden');
 		this.parentElement.querySelector('small').innerText = 'Некорректный номер телефона';
 		return;
-	}		
+	}
 	this.parentElement.querySelector('small').classList.add('hidden');
 };
 
@@ -92,6 +92,7 @@ document.querySelectorAll("form").forEach(function(form) {
 		}
 		// fetch('https://diywebdev.ru/lead/dev/', {
 		fetch('https://alexsab.ru/lead/metallvsamare', {
+			mode: 'cors',
 			method: 'POST',
 			body: formData,
 		})
