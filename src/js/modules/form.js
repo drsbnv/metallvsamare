@@ -90,6 +90,9 @@ document.querySelectorAll("form").forEach(function(form) {
 				formData.append(param[0], param[1]);
 			});
 		}
+		for (const pair of formData) {
+			params.append(pair[0], pair[1]);
+		}
 		// fetch('https://diywebdev.ru/lead/dev/', {
 		fetch('https://alexsab.ru/lead/metallvsamare/', {
 			method: 'POST',
@@ -99,7 +102,7 @@ document.querySelectorAll("form").forEach(function(form) {
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded',
 			},
-			body: formData,
+			body: params,
 		})
 		.then(res => res.json())
 		.then(await function(data){
