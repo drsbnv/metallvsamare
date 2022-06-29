@@ -1,13 +1,14 @@
-- title: Каркас лестницы. Центральный косоур. Фемели парк
+- title: Каркас лестницы. Центральный косоур. Фэмили парк
   short_title: Каркас лестницы
-  uid: centralnyj-kosour-karkas-femeli-park
+  uid: centralnyj-kosour-karkas-family-park
   categories: lestnicy
   date: 14.12.2021
   photo_thumb: 2021-12-14-13-45-51.JPG
   photo: 2021-12-14-13-45-51.JPG
   photos: 2021-12-14 13-45-43.JPG,2021-12-14 13-45-45.JPG,2021-12-14 13-45-47.JPG,2021-12-14 13-45-49.JPG,2021-12-14 13-45-53.JPG,2021-12-14 13-45-55.JPG
   text: Seo текст на странице. Краткое или детальное описание выполненной работы.
-- title: Экопарк, ступени бук, перила комбинированые
+
+- title: Экопарк, ступени бук, перила комбинированные
   short_title: Ступени бук
   uid: ekopark-stupeni-buk-perila-kombinirovannye
   categories: lestnicy
@@ -16,6 +17,7 @@
   photo: 2021-05-26 15-57-07.JPG
   photos: 2021-05-26 15-56-13.JPG,2021-05-26 15-56-19.JPG,2021-05-26 15-56-27.JPG,2021-05-26 15-56-36.JPG,2021-05-26 15-56-56.JPG,2021-05-26 15-56-57.JPG,2021-05-26 15-56-59.JPG,2021-05-26 15-57-03.JPG,2021-05-26 15-57-06.JPG,2021-05-30 10-57-19.JPG,2021-05-26 15-57-17.JPG,2021-05-26 15-57-18.JPG,2021-05-26 15-57-21.JPG,2021-05-26 15-57-22.JPG,2021-05-26 15-57-42.JPG,2021-05-26 15-57-43.JPG,2021-05-30 10-57-19_1626101659201.JPG,2021-05-30 10-57-19_1626101664875.JPG
   text: Seo текст на странице. Краткое или детальное описание выполненной работы.
+
 - title: Каркас лестницы Излучина village
   short_title: Каркас лестницы
   uid: frame-ladder-bend-village
@@ -179,7 +181,7 @@
   photo: ef844254301ccc6e9132c7dd555302f6.jpg
   photos: aaa0dd5a1f482b6614c8cfe78992bc12.jpg,569a8d06f661386ef7ea5b3bd5d2186b.jpg
 
-- title: Кованая кровать
+- title: Кованная кровать
   short_title: Кованая кровать
   uid: wrought-iron-bed
   categories: kovka,nestandartnye-zakazy
@@ -422,7 +424,7 @@
   photo: 6b6b3d49d1c3d833d112091ce9b9a5d3.jpg
   photos: 612024f73401a8a5c14f5e2429e2a4a1.jpg
 
-- title: Ограждение террассы, Лестница на террассу. Мехзавод, Березовая аллея
+- title: Ограждение террассы, Лестница на террасу. Мехзавод, Березовая аллея
   short_title: Ограждение террассы, Лестница на террассу
   uid: fencing-terraces-stairs-to-the-terrace-mekhzavod-berezovaya-alley
   categories: nestandartnye-zakazy
@@ -458,7 +460,7 @@
   photo: 08b5e980a0721cc3de74e8a1ba01dd81.JPG
   photos: 3da788d652847fba0c3dfaf6885b5b37.jpg,d010d1a02080e21de32d047612994fbe.jpg,956b2387965de94a3dd761cc1eac4b11.jpg,d7e01876bea5c4897960e7287292f8fd.jpg
 
-- title: Стелаж декоративный
+- title: Стеллаж декоративный
   short_title: Стелаж декоративный
   uid: shelf-decorative
   categories: kovka
@@ -548,7 +550,7 @@
   photo: e60a3e838e7e4f6e98b97a7529bea0be.jpg
   photos: a4fbe090a4f6cc860133700fd9629dde.jpg,8c6cb69b0eade952b8da30eeb7ab8182.jpg,9a49074e92e6a1c581e2f353e3d7f9b6.jpg
 
-- title: Забор из проф листа. Старая Бинарадка
+- title: Забор из профлиста. Старая Бинарадка
   short_title: Забор из проф листа
   uid: the-fence-from-prof-sheet-staraya-binaradka
   categories: zabory
@@ -584,7 +586,7 @@
   photo: 1c254c74674829b952e4a4901eb10425.jpg
   photos:
 
-- title: Забор из проф листа. Самара, 5 просека
+- title: Забор из профлиста. Самара, 5 просека
   short_title: Забор из проф листа
   uid: the-fence-from-prof-sheet-samara-5-glade
   categories: zabory
@@ -647,7 +649,7 @@
   photo: 50387a4aded3c4dfcf3538aa375780a4.jpg
   photos: 6d9cd4ef2d0b2d46e25d8bfadf63a0f1.jpg,b79f525d982706fd9c1c65361e342bb0.jpg
 
-- title: Забор из проф листа. Сокские дачи
+- title: Забор из профлиста. Сокские дачи
   short_title: Забор из проф листа
   uid: the-fence-from-prof-sheet-sokskoe-villas
   categories: zabory
@@ -719,7 +721,7 @@
   photo: f1f53393c3f04069d7af1e26a051908f.jpg
   photos: a5228046af35202765869876d30d2389.jpg,2a132a35913eef89d3b0fd3e155f66f4.jpg
 
-- title: Каркас лестницы, под отделку деревом. Граный
+- title: Каркас лестницы, под отделку деревом. Гранный
   short_title: Каркас лестницы, под отделку деревом
   uid: frame-ladder-for-finishing-wood-grany
   categories: lestnicy
@@ -809,7 +811,7 @@
   photo: f30b26a04eb6baa80dbabc9ca1119484.jpg
   photos: 8fc449b5b25906ed30223dec1b847fda.jpg,077d54c96e2fadebe969f69000a074c2.jpg
 
-- title: Лестница Ново-Семейкино
+- title: Лестница Новосемейкино
   short_title: Лестница
   uid: ladder-novo-semeykino
   categories: lestnicy
@@ -818,7 +820,7 @@
   photo: d2dff373e1698055085253f220f447df.jpg
   photos: 18c3563bfd4559e0e8d98fe6c788e8e2.jpg
 
-- title: Полностью забежная лестница на три этажа, ступени закрыты листовым металлом, под отделку пробкой. Таун-хаус Самара ул. Охотничья
+- title: Полностью забежная лестница на три этажа, ступени покрыты листовым металлом, под отделку пробкой. Таун-хаус Самара ул. Охотничья
   short_title: Полностью забежная лестница на три этажа, ступени закрыты листовым металлом, под отделку пробкой. Таун-хаус
   uid: fully-winder-staircase-over-three-floors-the-stairs-are-closed-with-sheet-metal-under-the-trim-tube-town-house-samara-street-hunting
   categories: lestnicy
@@ -827,7 +829,7 @@
   photo: 3710213310252f1557ab81c530c3f9f4.jpg
   photos: 69524b20528231beb3ccb3963f33e6ef.jpg,eabe5d8c071a6fef77bb62160e7ca666.jpg
 
-- title: Забор из проф листа. Кинельский район, п. Гвардейцы
+- title: Забор из профлиста. Кинельский район, п. Гвардейцы
   short_title: Забор из проф листа
   uid: the-fence-from-prof-sheet-kinelsky-district-village-guards
   categories: zabory
@@ -836,7 +838,7 @@
   photo: 1bf8553b25e1e2f56cf964cc51770e6b.jpg
   photos: ab0f686390eeaf76e98de87e8bd7a925.jpg,0a42eb87ca1c81beb76f9fc9f5d90057.jpg
 
-- title: Ворота из проф.листа
+- title: Ворота из профлиста
   short_title: Ворота из проф.листа
   uid: the-gate-of-prof-sheet
   categories: zabory
