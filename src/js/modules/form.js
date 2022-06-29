@@ -91,7 +91,7 @@ document.querySelectorAll("form").forEach(function(form) {
 			});
 		}
 		// fetch('https://diywebdev.ru/lead/dev/', {
-		fetch('https://alexsab.ru/lead/metallvsamare', {
+		fetch('https://alexsab.ru/lead/metallvsamare/', {
 			method: 'POST',
 			mode: 'cors',
 			cache: 'no-cache',
