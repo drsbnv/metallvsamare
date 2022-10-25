@@ -849,7 +849,7 @@
 
 - title: Дизайнерская лестница ступени дуб, ограждение гнутое стекло
   short_title: Дизайнерская лестница ступени дуб, ограждение гнутое стекло
-  uid: ekopark-stupeni-buk-perila-kombinirovannye
+  uid: dizajnerskaya-lestnica-stupeni-dub-ograzhdenie-gnutoe-steklo
   categories: lestnicy
   date: 26.03.2021
   photo_thumb: 2021-03-26 06-20-22_161840268194.JPG 
@@ -859,7 +859,7 @@
 
 - title: Каркас центральный косоур 9 просека 
   short_title: Каркас центральный косоур 9 просека
-  uid: Karkas central'nyj kosour 9 proseka
+  uid: karkas-centralnyj-kosour-9-proseka
   categories: lestnicy
   date: 29.04.2021
   photo_thumb: 2021-04-29 13-01-01.JPG 
@@ -868,8 +868,8 @@
   text: Seo текст на странице. Краткое или детальное описание выполненной работы.
 
 - title: Лестница на центральном косоуре п.Лебедь,Кинель
-  short_title: Лестница на центральном косоуре п.Лебедь
-  uid: Lestnica na central'nom kosoure p.Lebed'
+  short_title: Лестница на центральном косоуре п.Лебедь,Кинель
+  uid: lestnica-na-centralnom-kosoure-p-lebed-kinel
   categories: lestnicy
   date: 16.04.2021
   photo_thumb: 2021-04-16 22-31-29.JPG 
@@ -879,7 +879,7 @@
 
 - title: Крыльцо п.Лебедь
   short_title: Крыльцо п.Лебедь
-  uid: Kryl'co p.Lebed'
+  uid: krylco-p-lebed
   categories: lestnicy
   date: 18.09.2021
   photo_thumb: 2021-09-18 21-42-57.JPG 
@@ -889,7 +889,7 @@
 
 - title: Лестница дачная
   short_title: Лестница дачная
-  uid: Lestnica dachnaya
+  uid: lestnica-dachnaya
   categories: lestnicy
   date: 14.02.2022
   photo_thumb: 2022-02-14 15-58-59_1645429213570.JPG 
@@ -899,7 +899,7 @@
 
 - title: Лестница на ломаном косоуре, ступени ясень
   short_title: Лестница на ломаном косоуре, ступени ясень
-  uid: Lestnica na lomanom kosoure, stupeni yasen'
+  uid: lestnica-na-lomanom-kosoure-stupeni-yasen
   categories: lestnicy
   date: 13.04.2021
   photo_thumb: 2021-04-13 22-05-52.JPG 
@@ -909,7 +909,7 @@
 
 - title: Лестница на ломаном косуре Рубежка
   short_title: Лестница на ломаном косуре Рубежка
-  uid: Lestnica na lomanom kosure Rubezhka
+  uid: lestnica-na-lomanom-kosure-rubezhka
   categories: lestnicy
   date: 11.03.2021
   photo_thumb: 2021-03-11 17-04-44.JPG 
@@ -919,7 +919,7 @@
 
 - title: Лестница на центральном косоуре посёлок юбилейный
   short_title: Лестница на центральном косоуре посёлок юбилейный
-  uid: Lestnica na central'nom kosoure posyolok yubilejnyj
+  uid: lestnica-na-centralnom-kosoure-posyolok-yubilejnyj
   categories: lestnicy
   date: 11.03.2021
   photo_thumb: 2021-03-11 17-36-08.JPG 
@@ -929,7 +929,7 @@
 
 - title: Лестница на центральном косоуре, ступени 80мм дуб, с динамической подсветкой
   short_title: Лестница на центральном косоуре, ступени 80мм дуб, с динамической подсветкой
-  uid: Lestnica na central'nom kosoure, stupeni 80mm dub, s dinamicheskoj podsvetkoj
+  uid: lestnica-na-centralnom-kosoure-stupeni-80mm-dub-s-dinamicheskoj-podsvetkoj
   categories: lestnicy
   date: 08.06.2022
   photo_thumb: 2022-06-08 11-00-28.JPG 
@@ -939,7 +939,7 @@
 
 - title: Лестница Новокуйбышевск
   short_title: Лестница Новокуйбышевск
-  uid: Lestnica Novokujbyshevsk
+  uid: lestnica-novokujbyshevsk
   categories: lestnicy
   date: 03.02.2022
   photo_thumb: 2022-02-03 17-34-48_1644485591576.JPG 
@@ -949,17 +949,7 @@
 
 - title: Лестница Экопарк ограждение металл
   short_title: Лестница Экопарк ограждение металл
-  uid: Lestnica Ekopark ograzhdenie metall
-  categories: lestnicy
-  date: 10.09.2021
-  photo_thumb: 2021-09-10 19-46-39.JPG 
-  photo: 2021-09-10 19-46-24.JPG 
-  photos: 2021-09-10 19-46-39.JPG,2021-09-10 19-46-24.JPG
-  text: Seo текст на странице. Краткое или детальное описание выполненной работы.
-
-- title: Лестница Экопарк ограждение металл
-  short_title: Лестница Экопарк ограждение металл
-  uid: Lestnica Ekopark ograzhdenie metall
+  uid: lestnica-ehkopark-ograzhdenie-metalll
   categories: lestnicy
   date: 10.09.2021
   photo_thumb: 2021-09-10 19-46-39.JPG 
@@ -969,7 +959,7 @@
 
 - title: Лестница экопарк ступени бук ограждение комбинированное
   short_title: Лестница экопарк ступени бук ограждение комбинированное
-  uid: Lestnica ekopark stupeni buk ograzhdenie kombinirovannoe
+  uid: lestnica-ehkopark-stupeni-buk-ograzhdenie-kombinirovannoe
   categories: lestnicy
   date: 16.02.2022
   photo_thumb: 2022-02-16 07-40-59_1645429133925.JPG 
@@ -979,7 +969,7 @@
 
 - title: Лестница Экопарк Ступени дуб ограждение ковка
   short_title: Лестница Экопарк Ступени дуб ограждение ковка
-  uid: Lestnica Ekopark Stupeni dub ograzhdenie kovka
+  uid: lestnica-ehkopark-stupeni-dub-ograzhdenie-kovka
   categories: lestnicy,kovka
   date: 29.01.2022
   photo_thumb: 2022-01-29 12-25-40_1643479638635.JPG 
@@ -989,7 +979,7 @@
 
 - title: Лестница Экопарк ясень
   short_title: Лестница Экопарк ясень
-  uid: Lestnica Ekopark yasen'
+  uid: lestnica-ehkopark-yasen
   categories: lestnicy
   date: 18.04.2021
   photo_thumb: 2021-04-18 17-19-04.JPG 
@@ -999,7 +989,7 @@
 
 - title: Новокуйбышевск, центральный косоур, ступени бук
   short_title: Новокуйбышевск, центральный косоур, ступени бук
-  uid: Novokujbyshevsk, central'nyj kosour, stupeni buk
+  uid: novokujbyshevsk-centralnyj-kosour-stupeni-buk
   categories: lestnicy
   date: 29.07.2021
   photo_thumb: 2021-07-29 14-37-05.JPG 
@@ -1009,7 +999,7 @@
 
 - title: п. Прибрежный, дом у Волги 
   short_title: п. Прибрежный, дом у Волги
-  uid: p. Pribrezhnyj, dom u Volgi
+  uid: p-pribrezhnyj-dom-u-volgi
   categories: lestnicy
   date: 17.08.2021
   photo_thumb: 2021-08-17 18-22-47_1629369237446.JPG 
